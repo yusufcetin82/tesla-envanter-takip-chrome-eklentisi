@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tesla Takip Ayarları</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tesla Envanter Asistanı</h1>
+
+    <div class="tabs">
+      <button class="tablink active" onclick="openTab(event, 'tabSettings')">Ayarlar</button>
+      <button class="tablink" onclick="openTab(event, 'tabCarCriteria')">Araç Kriterleri</button>
+      <button class="tablink" onclick="openTab(event, 'tabFormIndividual')">Bireysel Form</button>
+      <button class="tablink" onclick="openTab(event, 'tabFormCorporate')">Kurumsal Form</button>
+      <button class="tablink" onclick="openTab(event, 'tabStatus')">Durum</button>
+    </div>
+
+    <div id="tabSettings" class="tabcontent" style="display:block;">
+      <h2>Genel Ayarlar</h2>
+      <div>
+        <label for="trackingInterval">Kontrol Aralığı (saniye):</label>
+        <input type="number" id="trackingInterval" name="trackingInterval" min="10" value="30">
+      </div>
+      <div>
+        <label for="zipCode">Posta Kodu:</label>
+        <input type="text" id="zipCode" name="zipCode" placeholder="örn: 34010">
+      </div>
+      <button id="saveSettings">Ayarları Kaydet</button>
+      <hr>
+      <h2>İzleme Kontrolü</h2>
+      <button id="toggleTracking">İzlemeyi Başlat</button>
+      <p>Durum: <span id="trackingStatus">Durduruldu</span></p>
+    </div>
+
+    <div id="tabCarCriteria" class="tabcontent">
+      <h2>Araç Kriterleri</h2>
+      <div>
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" value="my" placeholder="örn: my, m3">
+      </div>
+      <div>
+        <label for="color">Renk (virgülle ayırın):</label>
+        <input type="text" id="color" name="color" placeholder="örn: Quicksilver, Beyaz">
+      </div>
+      <div>
+        <label for="maxPrice">Maksimum Fiyat (TRY):</label>
+        <input type="number" id="maxPrice" name="maxPrice" placeholder="örn: 3500000">
+      </div>
+      <button id="saveCarCriteria">Kriterleri Kaydet</button>
+    </div>
+
+    <div id="tabFormIndividual" class="tabcontent">
+      <h2>Bireysel Form Bilgileri</h2>
+      <p>Doldurulacak alanlar buraya gelecek...</p>
+      <button id="saveFormIndividual">Bireysel Formu Kaydet</button>
+    </div>
+
+    <div id="tabFormCorporate" class="tabcontent">
+      <h2>Kurumsal Form Bilgileri</h2>
+      <p>Doldurulacak alanlar buraya gelecek...</p>
+      <button id="saveFormCorporate">Kurumsal Formu Kaydet</button>
+    </div>
+
+    <div id="tabStatus" class="tabcontent">
+      <h2>Eklenti Durumu</h2>
+      <p>Son Kontrol: <span id="lastCheckTime">-</span></p>
+      <p>Toplam Kontrol: <span id="totalChecks">0</span></p>
+      <p>Bulunan Araç Sayısı: <span id="foundCarsCount">0</span></p>
+      <p>API Durumu: <span id="apiStatus">-</span></p>
+    </div>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 

@@ -1,0 +1,457 @@
+{
+    "InTransit": true,
+    "ADL_OPTS": null,
+    "AUTOPILOT": null,
+    "BATTERY": null,
+    "CABIN_CONFIG": [
+        "FIVE"
+    ],
+    "CPORefurbishmentStatus": null,
+    "CashDetails": {
+        "cash": {
+            "inventoryPriceWithoutDiscounts": 1913604
+        }
+    },
+    "CompositorViews": {
+        "frontView": "STUD_3QTR",
+        "sideView": "SIDE",
+        "interiorView": "STUD_SEAT"
+    },
+    "CountryCode": "TR",
+    "CountryHasVehicleAtLocation": false,
+    "CountryOfOrigin": "TR",
+    "CurrencyCode": "TRY",
+    "CurrencyCodes": "TRY",
+    "DECOR": null,
+    "DRIVE": [
+        "DRLH"
+    ],
+    "DamageDisclosure": false,
+    "DamageDisclosureStatus": null,
+    "DestinationHandlingFee": 0,
+    "Discount": 0,
+    "DisplayWarranty": false,
+    "FactoryCode": "GF05",
+    "FederalIncentives": {
+        "IsTaxIncentiveEligible": false,
+        "PriceAfterTaxIncentive": 1444700,
+        "TaxIncentiveAmount": 0
+    },
+    "FixedAssets": false,
+    "FlexibleOptionsData": [
+        {
+            "code": "$APF2",
+            "description": "Full Self-Driving Kabiliyeti",
+            "group": "AUTOPILOT",
+            "long_name": "Full Self-Driving Kabiliyeti",
+            "name": "Full Self-Driving Kabiliyeti",
+            "price": 228480
+        },
+        {
+            "code": "$APPB",
+            "description": "Geli\u015ftirilmi\u015f Otopilot",
+            "group": "AUTOPILOT",
+            "long_name": "Geli\u015ftirilmi\u015f Otopilot",
+            "name": "Geli\u015ftirilmi\u015f Otopilot",
+            "price": 115260
+        }
+    ],
+    "ForecastedFactoryGatedDate": null,
+    "HEADLINER": null,
+    "HasDamagePhotos": false,
+    "Hash": "242_1ee55cede3ea951b10b5a1951c5882ae",
+    "INTERIOR": [
+        "PREMIUM_WHITE"
+    ],
+    "InspectionDocumentGuid": null,
+    "InventoryPrice": 1913604,
+    "IsChargingConnectorIncluded": false,
+    "IsDemo": false,
+    "IsFactoryGated": true,
+    "IsFederalCreditEligible": false,
+    "IsInTransit": true,
+    "IsLegacy": false,
+    "IsPreProdWithDisclaimer": false,
+    "Language": "tr",
+    "Languages": [
+        "tr"
+    ],
+    "LexiconDefaultOptions": [
+        {
+            "code": "$CPF0",
+            "description": "Standart Ba\u011flant\u0131",
+            "group": "CONNECTIVITY",
+            "long_name": "Standart Ba\u011flant\u0131",
+            "name": "Standart Ba\u011flant\u0131"
+        },
+        {
+            "code": "$SC04",
+            "description": "Supercharger A\u011f Eri\u015fimi + Kulland\u0131k\u00e7a \u00d6de",
+            "group": "SUPER_CHARGER",
+            "long_name": "Supercharger A\u011f Eri\u015fimi + Kulland\u0131k\u00e7a \u00d6de",
+            "name": "Supercharger A\u011f Eri\u015fimi + Kulland\u0131k\u00e7a \u00d6de"
+        }
+    ],
+    "ListingType": "public",
+    "ListingTypes": "public",
+    "Model": "my",
+    "Odometer": 0,
+    "OdometerType": "Km",
+    "OptionCodeData": [
+        {
+            "acceleration_unit_long": "kilometre/saat",
+            "acceleration_unit_short": "km/s",
+            "acceleration_value": "0-100",
+            "code": "$MTY46",
+            "group": "SPECS_ACCELERATION",
+            "price": 1408790,
+            "unit_long": "saniye",
+            "unit_short": "sn",
+            "value": "7.6"
+        },
+        {
+            "code": "$MTY46",
+            "group": "SPECS_TOP_SPEED",
+            "price": 1408790,
+            "top_speed_label": "Azami H\u0131z",
+            "unit_long": "kilometre/saat",
+            "unit_short": "km/s",
+            "value": "201"
+        },
+        {
+            "code": "$MTY46",
+            "group": "SPECS_RANGE",
+            "price": 1408790,
+            "range_label_source": "Menzil (WLTP)",
+            "range_source": "WLTP",
+            "range_source_inventory_new": "WLTP",
+            "unit_long": "kilometre",
+            "unit_short": "km",
+            "value": "500"
+        },
+        {
+            "code": "$MTY46",
+            "group": "SPECS_TOWING",
+            "price": 1408790,
+            "value": "<nil>"
+        },
+        {
+            "code": "$APBS",
+            "description": "Otopilot",
+            "group": "AUTOPILOT",
+            "long_name": "Otopilot",
+            "name": "Otopilot"
+        },
+        {
+            "code": "$IPW7",
+            "description": "Siyah ve Beyaz Premium \u0130\u00e7 Mekan",
+            "group": "INTERIOR",
+            "long_name": "Siyah ve Beyaz Premium \u0130\u00e7 Mekan",
+            "name": "Siyah ve Beyaz Premium \u0130\u00e7 Mekan",
+            "price": 35910
+        },
+        {
+            "code": "$PN01",
+            "description": "Stealth Grey",
+            "group": "PAINT",
+            "long_name": "Stealth Grey Boya",
+            "name": "Stealth Grey"
+        },
+        {
+            "code": "$SC04",
+            "description": "Supercharger A\u011f Eri\u015fimi + Kulland\u0131k\u00e7a \u00d6de",
+            "group": "SUPER_CHARGER",
+            "long_name": "Supercharger A\u011f Eri\u015fimi + Kulland\u0131k\u00e7a \u00d6de",
+            "name": "Supercharger A\u011f Eri\u015fimi + Kulland\u0131k\u00e7a \u00d6de"
+        },
+        {
+            "code": "$MDLY",
+            "description": "Rezervasyon tarihine ve yap\u0131lan se\u00e7imlere g\u00f6re ABD'de teslimatlar ba\u015fl\u0131yor.",
+            "group": "MODEL",
+            "long_name": "Model Y",
+            "name": "Model Y"
+        },
+        {
+            "code": "$WY19P",
+            "description": "19\" Crossflow Jantlar",
+            "group": "WHEELS",
+            "long_name": "19\" Crossflow Jantlar",
+            "name": "19\" Crossflow Jantlar"
+        },
+        {
+            "code": "$MTY46",
+            "description": "Model Y Arkadan \u00c7eki\u015f",
+            "group": "TRIM",
+            "long_name": "Model Y Arkadan \u00c7eki\u015f",
+            "name": "Model Y Arkadan \u00c7eki\u015f",
+            "price": 1408790
+        },
+        {
+            "code": "$STY5S",
+            "description": "Be\u015f Koltuklu \u0130\u00e7 Mekan",
+            "group": "REAR_SEATS",
+            "long_name": "Be\u015f Koltuklu \u0130\u00e7 Mekan",
+            "name": "Be\u015f Koltuklu \u0130\u00e7 Mekan"
+        },
+        {
+            "code": "$CPF0",
+            "description": "Standart Ba\u011flant\u0131",
+            "group": "CONNECTIVITY",
+            "long_name": "Standart Ba\u011flant\u0131",
+            "name": "Standart Ba\u011flant\u0131"
+        }
+    ],
+    "OptionCodeList": "$APBS,$IPW7,$PN01,$SC04,$MDLY,$WY19P,$MTY46,$STY5S,$CPF0",
+    "OptionCodeListDisplayOnly": null,
+    "OptionCodePricing": [
+        {
+            "code": "$MDLY",
+            "group": "MODEL",
+            "price": 0
+        },
+        {
+            "code": "$APBS",
+            "group": "AUTOPILOT_PACKAGE",
+            "price": 0
+        },
+        {
+            "code": "$CPF0",
+            "group": "CONNECTIVITY",
+            "price": 0
+        },
+        {
+            "code": "$PN01",
+            "group": "PAINT",
+            "price": 0
+        },
+        {
+            "code": "$STY5S",
+            "group": "REAR_SEATS",
+            "price": 0
+        },
+        {
+            "code": "$SC04",
+            "group": "SUPER_CHARGER",
+            "price": 0
+        },
+        {
+            "code": "$WY19P",
+            "group": "WHEELS",
+            "price": 0
+        },
+        {
+            "code": "$IPW7",
+            "group": "INTERIOR",
+            "price": 35910
+        },
+        {
+            "code": "$MTY46",
+            "group": "TRIM",
+            "price": 1408790
+        }
+    ],
+    "OrderFee": {
+        "type": "non_refundable_order_payment",
+        "value": 50000
+    },
+    "OriginalDeliveryDate": null,
+    "OriginalInCustomerGarageDate": null,
+    "PAINT": [
+        "GREY"
+    ],
+    "PreviouslyRegistered": false,
+    "Price": 1913604,
+    "PurchasePrice": 1444700,
+    "ROOF": null,
+    "RegistrationCount": 0,
+    "STEERING_WHEEL": null,
+    "TRIM": [
+        "MYRWD"
+    ],
+    "TaxScheme": null,
+    "ThirdPartyHistoryUrl": null,
+    "TitleStatus": "NEW",
+    "TitleSubtype": [
+        "BRANDNEW"
+    ],
+    "TotalPrice": 1913604,
+    "TradeInType": null,
+    "TransportFees": {
+        "exemptVRL": [],
+        "fees": [],
+        "metro_fees": [],
+        "trt_to_trt_fees": []
+    },
+    "TrimCode": "$MTY46",
+    "TrimName": "Model Y Arkadan \u00c7eki\u015f",
+    "TrimVariantCode": "RWD_NV36",
+    "Trt": 21085,
+    "VIN": "XP7Y242_1ee55cede3ea951b10b5a1951c5882ae",
+    "VehicleHistory": null,
+    "WHEELS": [
+        "NINETEEN"
+    ],
+    "WarrantyBatteryExpDate": "0001-01-01T00:00:00Z",
+    "WarrantyBatteryIsExpired": false,
+    "WarrantyBatteryMile": 160000,
+    "WarrantyBatteryYear": 8,
+    "WarrantyData": {
+        "UsedVehicleLimitedWarrantyMile": 0,
+        "UsedVehicleLimitedWarrantyYear": 0,
+        "WarrantyBatteryExpDate": "0001-01-01T00:00:00Z",
+        "WarrantyBatteryIsExpired": false,
+        "WarrantyBatteryMile": 160000,
+        "WarrantyBatteryYear": 8,
+        "WarrantyDriveUnitExpDate": "0001-01-01T00:00:00Z",
+        "WarrantyDriveUnitMile": 160000,
+        "WarrantyDriveUnitYear": 8,
+        "WarrantyMile": 80000,
+        "WarrantyVehicleExpDate": "0001-01-01T00:00:00Z",
+        "WarrantyVehicleIsExpired": false,
+        "WarrantyYear": 4
+    },
+    "WarrantyDriveUnitExpDate": "0001-01-01T00:00:00Z",
+    "WarrantyDriveUnitMile": 160000,
+    "WarrantyDriveUnitYear": 8,
+    "WarrantyMile": 80000,
+    "WarrantyVehicleExpDate": "0001-01-01T00:00:00Z",
+    "WarrantyVehicleIsExpired": false,
+    "WarrantyYear": 4,
+    "Year": 2025,
+    "AlternateCurrency": [],
+    "UsedVehicleLimitedWarrantyMile": 0,
+    "UsedVehicleLimitedWarrantyYear": 0,
+    "OdometerTypeShort": "km",
+    "DeliveryDateDisplay": true,
+    "TransportationFee": 0,
+    "vrlList": [
+        {
+            "vrl": 0,
+            "lat": 0,
+            "lon": 0,
+            "vrlLocks": []
+        }
+    ],
+    "OptionCodeSpecs": {
+        "C_SPECS": {
+            "code": "C_SPECS",
+            "name": "Specs",
+            "options": [
+                {
+                    "code": "SPECS_RANGE",
+                    "name": "500 km",
+                    "long_name": "500 kilometre",
+                    "description": "Menzil (WLTP)",
+                    "lexiconGroup": "SPECS_RANGE"
+                },
+                {
+                    "code": "SPECS_TOP_SPEED",
+                    "name": "201 km/s",
+                    "long_name": "201 kilometre/saat",
+                    "description": "Azami H\u0131z",
+                    "lexiconGroup": "SPECS_TOP_SPEED"
+                },
+                {
+                    "code": "SPECS_ACCELERATION",
+                    "name": "7,6 sn",
+                    "long_name": "7,6 saniye",
+                    "description": "0-100 km/s",
+                    "lexiconGroup": "SPECS_ACCELERATION"
+                }
+            ]
+        },
+        "C_DESIGN": {
+            "code": "C_DESIGN",
+            "name": "Design",
+            "options": []
+        },
+        "C_CALLOUTS": {
+            "code": "C_CALLOUTS",
+            "name": "Callout Features",
+            "options": [
+                {
+                    "code": "$APBS",
+                    "name": "Otopilot",
+                    "long_name": "",
+                    "description": "Otopilot",
+                    "lexiconGroup": "AUTOPILOT",
+                    "group": "AUTOPILOT"
+                },
+                {
+                    "code": "PCT1M",
+                    "name": "30 G\u00fcn Premium Ba\u011flant\u0131 Denemesi",
+                    "description": "30 G\u00fcn Premium Ba\u011flant\u0131 Denemesi",
+                    "group": "CONNECTIVITY",
+                    "list": [
+                        "satelliteMaps",
+                        "musicStreaming",
+                        "videoStreaming",
+                        "caraoke",
+                        "internetBrowser"
+                    ],
+                    "period": "30 G\u00fcn"
+                }
+            ]
+        },
+        "C_OPTS": {
+            "code": "C_OPTS",
+            "name": "Options",
+            "options": [
+                {
+                    "code": "$PN01",
+                    "name": "Stealth Grey Boya",
+                    "long_name": "",
+                    "description": "Stealth Grey",
+                    "lexiconGroup": "PAINT"
+                },
+                {
+                    "code": "$WY19P",
+                    "name": "19\" Crossflow Jantlar",
+                    "long_name": "",
+                    "description": "19\" Crossflow Jantlar",
+                    "lexiconGroup": "WHEELS"
+                },
+                {
+                    "code": "$IPW7",
+                    "name": "Siyah ve Beyaz Premium \u0130\u00e7 Mekan",
+                    "long_name": "",
+                    "description": "Siyah ve Beyaz Premium \u0130\u00e7 Mekan",
+                    "lexiconGroup": "INTERIOR"
+                },
+                {
+                    "code": "$STY5S",
+                    "name": "Be\u015f Koltuklu \u0130\u00e7 Mekan",
+                    "long_name": "",
+                    "description": "Be\u015f Koltuklu \u0130\u00e7 Mekan",
+                    "lexiconGroup": "REAR_SEATS"
+                },
+                {
+                    "code": "$APBS",
+                    "name": "Otopilot",
+                    "long_name": "",
+                    "description": "Otopilot",
+                    "lexiconGroup": "AUTOPILOT"
+                }
+            ]
+        }
+    },
+    "CompositorViewsCustom": {
+        "isProductWithCustomViews": false,
+        "externalZoom": {
+            "order": 1,
+            "search": 1
+        },
+        "externalCrop": {
+            "order": "1400,850,250,150",
+            "search": "1400,850,300,130"
+        }
+    },
+    "IsRangeStandard": true,
+    "geoPoints": [
+        [
+            "0,0",
+            0
+        ]
+    ],
+    "HasMarketingOptions": true
+}

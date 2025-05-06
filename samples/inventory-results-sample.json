@@ -1,0 +1,997 @@
+{
+    "results": [
+      {
+        "InTransit": false,
+        "ADL_OPTS": [
+          "PERFORMANCE_UPGRADE"
+        ],
+        "AUTOPILOT": null,
+        "BATTERY": null,
+        "CABIN_CONFIG": [
+          "FIVE"
+        ],
+        "CPORefurbishmentStatus": null,
+        "CashDetails": {
+          "cash": {
+            "inventoryPriceWithoutDiscounts": 3715392
+          }
+        },
+        "CompositorViews": {
+          "frontView": "STUD_3QTR",
+          "sideView": "SIDE",
+          "interiorView": "STUD_SEAT"
+        },
+        "CountryCode": "TR",
+        "CountryHasVehicleAtLocation": true,
+        "CountryOfOrigin": "TR",
+        "CurrencyCode": "TRY",
+        "CurrencyCodes": "TRY",
+        "DECOR": null,
+        "DRIVE": [
+          "DRLH"
+        ],
+        "DamageDisclosure": false,
+        "DamageDisclosureStatus": "PendingReview",
+        "DestinationHandlingFee": 0,
+        "Discount": 192100,
+        "DisplayWarranty": false,
+        "FactoryCode": "GF05",
+        "FederalIncentives": {
+          "IsTaxIncentiveEligible": false,
+          "PriceAfterTaxIncentive": 1738000,
+          "TaxIncentiveAmount": 0
+        },
+        "FirstRegistrationDate": null,
+        "FixedAssets": false,
+        "FlexibleOptionsData": [
+          {
+            "code": "$APF2",
+            "description": "Full Self-Driving Kabiliyeti",
+            "group": "AUTOPILOT",
+            "long_name": "Full Self-Driving Kabiliyeti",
+            "name": "Full Self-Driving Kabiliyeti",
+            "price": 228480
+          },
+          {
+            "code": "$APPB",
+            "description": "Geliştirilmiş Otopilot",
+            "group": "AUTOPILOT",
+            "long_name": "Geliştirilmiş Otopilot",
+            "name": "Geliştirilmiş Otopilot",
+            "price": 115260
+          }
+        ],
+        "ForecastedFactoryGatedDate": null,
+        "HEADLINER": null,
+        "HasDamagePhotos": false,
+        "Hash": "296_cd165ba0e0dde0db35c3293cdb973f93",
+        "INTERIOR": [
+          "PREMIUM_WHITE"
+        ],
+        "InspectionDocumentGuid": null,
+        "InventoryPrice": 3346560,
+        "IsChargingConnectorIncluded": false,
+        "IsDemo": false,
+        "IsFactoryGated": true,
+        "IsFederalCreditEligible": false,
+        "IsInTransit": false,
+        "IsLegacy": false,
+        "IsPreProdWithDisclaimer": false,
+        "Language": "tr",
+        "Languages": [
+          "tr"
+        ],
+        "LexiconDefaultOptions": [
+          {
+            "code": "$CPF0",
+            "description": "Standart Bağlantı",
+            "group": "CONNECTIVITY",
+            "long_name": "Standart Bağlantı",
+            "name": "Standart Bağlantı"
+          },
+          {
+            "code": "$SC04",
+            "description": "Supercharger Ağ Erişimi + Kullandıkça Öde",
+            "group": "SUPER_CHARGER",
+            "long_name": "Supercharger Ağ Erişimi + Kullandıkça Öde",
+            "name": "Supercharger Ağ Erişimi + Kullandıkça Öde"
+          }
+        ],
+        "ListingType": "public",
+        "ListingTypes": "public",
+        "Model": "my",
+        "Odometer": 12,
+        "OdometerType": "Km",
+        "OptionCodeData": [
+          {
+            "acceleration_unit_long": "kilometre/saat",
+            "acceleration_unit_short": "km/s",
+            "acceleration_value": "0-100",
+            "code": "$MTY12",
+            "group": "SPECS_ACCELERATION",
+            "price": 1804370,
+            "unit_long": "saniye",
+            "unit_short": "sn",
+            "value": "3.7"
+          },
+          {
+            "code": "$MTY12",
+            "group": "SPECS_TOP_SPEED",
+            "price": 1804370,
+            "top_speed_label": "Azami Hız",
+            "unit_long": "kilometre/saat",
+            "unit_short": "km/s",
+            "value": "250"
+          },
+          {
+            "code": "$MTY12",
+            "group": "SPECS_RANGE",
+            "price": 1804370,
+            "range_label_source": "Menzil",
+            "range_source": "WLTP",
+            "range_source_inventory_new": "Menzil",
+            "unit_long": "kilometre",
+            "unit_short": "km",
+            "value": "514"
+          },
+          {
+            "code": "$MTY12",
+            "group": "SPECS_TOWING",
+            "price": 1804370,
+            "value": "\u003Cnil\u003E"
+          },
+          {
+            "code": "$APBS",
+            "description": "Otopilot",
+            "group": "AUTOPILOT",
+            "long_name": "Otopilot",
+            "name": "Otopilot"
+          },
+          {
+            "code": "$BCYR",
+            "description": "Performans Frenler",
+            "group": "BRAKES",
+            "long_name": "Performans Frenler",
+            "name": "Performans Frenler"
+          },
+          {
+            "code": "$DV4W",
+            "description": "Çift Motorlu Dört Çeker",
+            "group": "DRIVE_MODE",
+            "long_name": "Çift Motorlu Dört Çeker",
+            "name": "Çift Motorlu Dört Çeker"
+          },
+          {
+            "code": "$INPW0",
+            "description": "Siyah ve Beyaz Premium İç Mekan",
+            "group": "INTERIOR",
+            "long_name": "Siyah ve Beyaz Premium İç Mekan",
+            "name": "Siyah ve Beyaz Premium İç Mekan",
+            "price": 35910
+          },
+          {
+            "code": "$PN00",
+            "description": "Quicksilver",
+            "group": "PAINT",
+            "long_name": "Quicksilver Boya",
+            "name": "Quicksilver",
+            "price": 89820
+          },
+          {
+            "code": "$PRMY1",
+            "description": "\u003Cp\u003Eİç mekanınızı ek özellikler ve premium malzemelerle geliştirin.\u003C/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cspan\u003EAçık gözenekli ahşap dekor, cam tavan ve dört USB portu dahil olmak üzere, baştan sona premium ısıtmalı koltuk ve kabin malzemeleri\u003C/span\u003E\u003C/li\u003E\u003Cli\u003E\u003Cspan\u003EÖzel sürücü profilleri ile 12 yönde elektrikli ayarlanabilir ön koltuklar, direksiyon kolonu ve yan aynalar\u003C/span\u003E\u003C/li\u003E\u003Cli\u003E\u003Cspan\u003EDaha fazla güç, tiz hoparlör, surround hoparlörler ve subwoofer ile premium ses sistemi\u003C/span\u003E\u003C/li\u003E\u003C/ul\u003E",
+            "group": "PREMIUM_PACKAGE",
+            "long_name": "Premium İç Mekan",
+            "name": "Premium İç Mekan"
+          },
+          {
+            "code": "$SC04",
+            "description": "Supercharger Ağ Erişimi + Kullandıkça Öde",
+            "group": "SUPER_CHARGER",
+            "long_name": "Supercharger Ağ Erişimi + Kullandıkça Öde",
+            "name": "Supercharger Ağ Erişimi + Kullandıkça Öde"
+          },
+          {
+            "code": "$MDLY",
+            "description": "Rezervasyon tarihine ve yapılan seçimlere göre ABD'de teslimatlar başlıyor.",
+            "group": "MODEL",
+            "long_name": "Model Y",
+            "name": "Model Y"
+          },
+          {
+            "code": "$WY21P",
+            "description": "21\" Überturbine Jantlar",
+            "group": "WHEELS",
+            "long_name": "21\" Überturbine Jantlar",
+            "name": "21\" Überturbine Jantlar"
+          },
+          {
+            "code": "$SLR1",
+            "description": "Karbon Fiber Rüzgarlık",
+            "group": "SPOILER",
+            "long_name": "Karbon Fiber Rüzgarlık",
+            "name": "Karbon Fiber Rüzgarlık"
+          },
+          {
+            "code": "$MTY12",
+            "description": "Model Y Performance AWD",
+            "group": "TRIM",
+            "long_name": "Model Y Performance Çift Motor Dört Çeker",
+            "name": "Performance Dört Çeker",
+            "price": 1804370
+          },
+          {
+            "code": "$PL31",
+            "description": "Performance Pedallar",
+            "group": "PEDALS",
+            "long_name": "Performance Pedallar",
+            "name": "Performance Pedallar"
+          },
+          {
+            "code": "$SPTY1",
+            "description": "Performans Yükseltmesi",
+            "group": "SPORT_PACKAGE",
+            "long_name": "Performans Yükseltmesi",
+            "name": "Performans Yükseltmesi"
+          },
+          {
+            "code": "$STY5S",
+            "description": "Beş Koltuklu İç Mekan",
+            "group": "REAR_SEATS",
+            "long_name": "Beş Koltuklu İç Mekan",
+            "name": "Beş Koltuklu İç Mekan"
+          },
+          {
+            "code": "$CPF0",
+            "description": "Standart Bağlantı",
+            "group": "CONNECTIVITY",
+            "long_name": "Standart Bağlantı",
+            "name": "Standart Bağlantı"
+          }
+        ],
+        "OptionCodeList": "$APBS,$BCYR,$DV4W,$INPW0,$PN00,$PRMY1,$SC04,$MDLY,$WY21P,$SLR1,$MTY12,$PL31,$SPTY1,$STY5S,$CPF0",
+        "OptionCodeListDisplayOnly": null,
+        "OptionCodePricing": [
+          {
+            "code": "$MDLY",
+            "group": "MODEL",
+            "price": 0
+          },
+          {
+            "code": "$APBS",
+            "group": "AUTOPILOT_PACKAGE",
+            "price": 0
+          },
+          {
+            "code": "$BCYR",
+            "group": "BRAKES",
+            "price": 0
+          },
+          {
+            "code": "$CPF0",
+            "group": "CONNECTIVITY",
+            "price": 0
+          },
+          {
+            "code": "$DV4W",
+            "group": "DRIVE_MODE",
+            "price": 0
+          },
+          {
+            "code": "$INPW0",
+            "group": "INTERIOR",
+            "price": 35910
+          },
+          {
+            "code": "$MTY12",
+            "group": "TRIM",
+            "price": 1804370
+          },
+          {
+            "code": "$PN00",
+            "group": "PAINT",
+            "price": 89820
+          },
+          {
+            "code": "$PL31",
+            "group": "PEDALS",
+            "price": 0
+          },
+          {
+            "code": "$PRMY1",
+            "group": "PREMIUM_PACKAGE",
+            "price": 0
+          },
+          {
+            "code": "$STY5S",
+            "group": "REAR_SEATS",
+            "price": 0
+          },
+          {
+            "code": "$SPTY1",
+            "group": "SPORT_PACKAGE",
+            "price": 0
+          },
+          {
+            "code": "$SC04",
+            "group": "SUPER_CHARGER",
+            "price": 0
+          },
+          {
+            "code": "$SLR1",
+            "group": "SPOILER",
+            "price": 0
+          },
+          {
+            "code": "$WY21P",
+            "group": "WHEELS",
+            "price": 0
+          }
+        ],
+        "OrderFee": {
+          "type": "non_refundable_order_payment",
+          "value": 50000
+        },
+        "OriginalDeliveryDate": null,
+        "OriginalInCustomerGarageDate": null,
+        "PAINT": [
+          "SILVER"
+        ],
+        "PreviouslyRegistered": false,
+        "Price": 3346560,
+        "PurchasePrice": 1738000,
+        "ROOF": null,
+        "RegistrationCount": 0,
+        "STEERING_WHEEL": null,
+        "TRIM": [
+          "PAWD"
+        ],
+        "TaxScheme": null,
+        "ThirdPartyHistoryUrl": null,
+        "TitleStatus": "NEW",
+        "TitleSubtype": [
+          "BRANDNEW"
+        ],
+        "TotalPrice": 3538660,
+        "TradeInType": null,
+        "TransportFees": {
+          "exemptVRL": [],
+          "fees": [],
+          "metro_fees": [],
+          "trt_to_trt_fees": []
+        },
+        "TrimCode": "$MTY12",
+        "TrimName": "Performance Dört Çeker",
+        "TrimVariantCode": "PERF",
+        "Trt": 442359,
+        "VIN": "XP7Y296_cd165ba0e0dde0db35c3293cdb973f93",
+        "VehicleHistory": null,
+        "WHEELS": [
+          "TWENTY_ONE"
+        ],
+        "WarrantyBatteryExpDate": "0001-01-01T00:00:00Z",
+        "WarrantyBatteryIsExpired": false,
+        "WarrantyBatteryMile": 192000,
+        "WarrantyBatteryYear": 8,
+        "WarrantyData": {
+          "UsedVehicleLimitedWarrantyMile": 0,
+          "UsedVehicleLimitedWarrantyYear": 0,
+          "WarrantyBatteryExpDate": "0001-01-01T00:00:00Z",
+          "WarrantyBatteryIsExpired": false,
+          "WarrantyBatteryMile": 192000,
+          "WarrantyBatteryYear": 8,
+          "WarrantyDriveUnitExpDate": "0001-01-01T00:00:00Z",
+          "WarrantyDriveUnitMile": 192000,
+          "WarrantyDriveUnitYear": 8,
+          "WarrantyMile": 80000,
+          "WarrantyVehicleExpDate": "0001-01-01T00:00:00Z",
+          "WarrantyVehicleIsExpired": false,
+          "WarrantyYear": 4
+        },
+        "WarrantyDriveUnitExpDate": "0001-01-01T00:00:00Z",
+        "WarrantyDriveUnitMile": 192000,
+        "WarrantyDriveUnitYear": 8,
+        "WarrantyMile": 80000,
+        "WarrantyVehicleExpDate": "0001-01-01T00:00:00Z",
+        "WarrantyVehicleIsExpired": false,
+        "WarrantyYear": 4,
+        "Year": 2025,
+        "AlternateCurrency": [],
+        "UsedVehicleLimitedWarrantyMile": 0,
+        "UsedVehicleLimitedWarrantyYear": 0,
+        "OdometerTypeShort": "km",
+        "DeliveryDateDisplay": true,
+        "TransportationFee": 0,
+        "vrlList": [
+          {
+            "vrl": 0,
+            "lat": 0,
+            "lon": 0,
+            "vrlLocks": []
+          }
+        ],
+        "OptionCodeSpecs": {
+          "C_SPECS": {
+            "code": "C_SPECS",
+            "name": "Specs",
+            "options": [
+              {
+                "code": "SPECS_RANGE",
+                "name": "514 km",
+                "long_name": "514 kilometre",
+                "description": "Menzil (Menzil)",
+                "lexiconGroup": "SPECS_RANGE"
+              },
+              {
+                "code": "SPECS_TOP_SPEED",
+                "name": "250 km/s",
+                "long_name": "250 kilometre/saat",
+                "description": "Azami Hız",
+                "lexiconGroup": "SPECS_TOP_SPEED"
+              },
+              {
+                "code": "SPECS_ACCELERATION",
+                "name": "3,7 sn",
+                "long_name": "3,7 saniye",
+                "description": "0-100 km/s",
+                "lexiconGroup": "SPECS_ACCELERATION"
+              }
+            ]
+          },
+          "C_DESIGN": {
+            "code": "C_DESIGN",
+            "name": "Design",
+            "options": []
+          },
+          "C_CALLOUTS": {
+            "code": "C_CALLOUTS",
+            "name": "Callout Features",
+            "options": [
+              {
+                "code": "$APBS",
+                "name": "Otopilot",
+                "long_name": "",
+                "description": "Otopilot",
+                "lexiconGroup": "AUTOPILOT",
+                "group": "AUTOPILOT"
+              },
+              {
+                "code": "PCT1M",
+                "name": "30 Gün Premium Bağlantı Denemesi",
+                "description": "30 Gün Premium Bağlantı Denemesi",
+                "group": "CONNECTIVITY",
+                "list": [
+                  "satelliteMaps",
+                  "musicStreaming",
+                  "videoStreaming",
+                  "caraoke",
+                  "internetBrowser"
+                ],
+                "period": "30 Gün"
+              }
+            ]
+          },
+          "C_OPTS": {
+            "code": "C_OPTS",
+            "name": "Options",
+            "options": [
+              {
+                "code": "$PN00",
+                "name": "Quicksilver Boya",
+                "long_name": "",
+                "description": "Quicksilver",
+                "lexiconGroup": "PAINT"
+              },
+              {
+                "code": "$WY21P",
+                "name": "21\" Überturbine Jantlar",
+                "long_name": "",
+                "description": "21\" Überturbine Jantlar",
+                "lexiconGroup": "WHEELS"
+              },
+              {
+                "code": "$INPW0",
+                "name": "Siyah ve Beyaz Premium İç Mekan",
+                "long_name": "",
+                "description": "Siyah ve Beyaz Premium İç Mekan",
+                "lexiconGroup": "INTERIOR"
+              },
+              {
+                "code": "$STY5S",
+                "name": "Beş Koltuklu İç Mekan",
+                "long_name": "",
+                "description": "Beş Koltuklu İç Mekan",
+                "lexiconGroup": "REAR_SEATS"
+              },
+              {
+                "code": "$APBS",
+                "name": "Otopilot",
+                "long_name": "",
+                "description": "Otopilot",
+                "lexiconGroup": "AUTOPILOT"
+              },
+              {
+                "code": "$SPTY1",
+                "name": "Performans Yükseltmesi",
+                "long_name": "",
+                "description": "Performans Yükseltmesi",
+                "lexiconGroup": "SPORT_PACKAGE"
+              }
+            ]
+          }
+        },
+        "CompositorViewsCustom": {
+          "isProductWithCustomViews": false,
+          "externalZoom": {
+            "order": 1,
+            "search": 1
+          },
+          "externalCrop": {
+            "order": "1400,850,250,150",
+            "search": "1400,850,300,130"
+          }
+        },
+        "IsRangeStandard": true,
+        "geoPoints": [
+          [
+            "0,0",
+            0]
+        ],
+        "HasMarketingOptions": true
+      },
+      {
+        "InTransit": true,
+        "ADL_OPTS": null,
+        "AUTOPILOT": null,
+        "BATTERY": null,
+        "CABIN_CONFIG": [
+          "FIVE"
+        ],
+        "CPORefurbishmentStatus": null,
+        "CashDetails": {
+          "cash": {
+            "inventoryPriceWithoutDiscounts": 3465581
+          }
+        },
+        "CompositorViews": {
+          "frontView": "STUD_3QTR",
+          "sideView": "SIDE",
+          "interiorView": "STUD_SEAT"
+        },
+        "CountryCode": "TR",
+        "CountryHasVehicleAtLocation": false,
+        "CountryOfOrigin": "TR",
+        "CurrencyCode": "TRY",
+        "CurrencyCodes": "TRY",
+        "DECOR": null,
+        "DRIVE": [
+          "DRLH"
+        ],
+        "DamageDisclosure": false,
+        "DamageDisclosureStatus": null,
+        "DestinationHandlingFee": 0,
+        "Discount": 0,
+        "DisplayWarranty": false,
+        "FactoryCode": "GF05",
+        "FederalIncentives": {
+          "IsTaxIncentiveEligible": false,
+          "PriceAfterTaxIncentive": 1799990,
+          "TaxIncentiveAmount": 0
+        },
+        "FixedAssets": false,
+        "FlexibleOptionsData": [
+          {
+            "code": "$APF2",
+            "description": "Full Self-Driving Kabiliyeti",
+            "group": "AUTOPILOT",
+            "long_name": "Full Self-Driving Kabiliyeti",
+            "name": "Full Self-Driving Kabiliyeti",
+            "price": 228480
+          },
+          {
+            "code": "$APPB",
+            "description": "Geliştirilmiş Otopilot",
+            "group": "AUTOPILOT",
+            "long_name": "Geliştirilmiş Otopilot",
+            "name": "Geliştirilmiş Otopilot",
+            "price": 115260
+          }
+        ],
+        "ForecastedFactoryGatedDate": null,
+        "HEADLINER": null,
+        "HasDamagePhotos": false,
+        "Hash": "242_f323f97f8c31df9f410993a75ad6e5d8",
+        "INTERIOR": [
+          "PREMIUM_BLACK"
+        ],
+        "InspectionDocumentGuid": null,
+        "InventoryPrice": 3465581,
+        "IsChargingConnectorIncluded": false,
+        "IsDemo": false,
+        "IsFactoryGated": true,
+        "IsFederalCreditEligible": false,
+        "IsInTransit": true,
+        "IsLegacy": false,
+        "IsPreProdWithDisclaimer": false,
+        "Language": "tr",
+        "Languages": [
+          "tr"
+        ],
+        "LexiconDefaultOptions": [
+          {
+            "code": "$CPF0",
+            "description": "Standart Bağlantı",
+            "group": "CONNECTIVITY",
+            "long_name": "Standart Bağlantı",
+            "name": "Standart Bağlantı"
+          },
+          {
+            "code": "$SC04",
+            "description": "Supercharger Ağ Erişimi + Kullandıkça Öde",
+            "group": "SUPER_CHARGER",
+            "long_name": "Supercharger Ağ Erişimi + Kullandıkça Öde",
+            "name": "Supercharger Ağ Erişimi + Kullandıkça Öde"
+          }
+        ],
+        "ListingType": "public",
+        "ListingTypes": "public",
+        "Model": "my",
+        "Odometer": 4,
+        "OdometerType": "Km",
+        "OptionCodeData": [
+          {
+            "acceleration_unit_long": "kilometre/saat",
+            "acceleration_unit_short": "km/s",
+            "acceleration_value": "0-100",
+            "code": "$MTY47",
+            "group": "SPECS_ACCELERATION",
+            "price": 1799990,
+            "unit_long": "saniye",
+            "unit_short": "sn",
+            "value": "4.8"
+          },
+          {
+            "code": "$MTY47",
+            "group": "SPECS_TOP_SPEED",
+            "price": 1799990,
+            "top_speed_label": "Azami Hız",
+            "unit_long": "kilometre/saat",
+            "unit_short": "km/s",
+            "value": "201"
+          },
+          {
+            "code": "$MTY47",
+            "group": "SPECS_RANGE",
+            "price": 1799990,
+            "range_source": "WLTP",
+            "unit_long": "kilometre",
+            "unit_short": "km",
+            "value": "586"
+          },
+          {
+            "code": "$MTY47",
+            "group": "SPECS_TOWING",
+            "price": 1799990,
+            "value": "\u003Cnil\u003E"
+          },
+          {
+            "code": "$APBS",
+            "description": "Otopilot",
+            "group": "AUTOPILOT",
+            "long_name": "Otopilot",
+            "name": "Otopilot"
+          },
+          {
+            "code": "$IPB8",
+            "description": "All Black Premium İç Mekan",
+            "group": "INTERIOR",
+            "long_name": "All Black Premium İç Mekan",
+            "name": "All Black Premium İç Mekan"
+          },
+          {
+            "code": "$PPSW",
+            "description": "Pearl White",
+            "group": "PAINT",
+            "long_name": "Pearl White Renk",
+            "name": "Pearl White Multi-Coat"
+          },
+          {
+            "code": "$SC04",
+            "description": "Supercharger Ağ Erişimi + Kullandıkça Öde",
+            "group": "SUPER_CHARGER",
+            "long_name": "Supercharger Ağ Erişimi + Kullandıkça Öde",
+            "name": "Supercharger Ağ Erişimi + Kullandıkça Öde"
+          },
+          {
+            "code": "$MDLY",
+            "description": "Rezervasyon tarihine ve yapılan seçimlere göre ABD'de teslimatlar başlıyor.",
+            "group": "MODEL",
+            "long_name": "Model Y",
+            "name": "Model Y"
+          },
+          {
+            "code": "$WY19P",
+            "description": "19\" Crossflow Jantlar",
+            "group": "WHEELS",
+            "long_name": "19\" Crossflow Jantlar",
+            "name": "19\" Crossflow Jantlar"
+          },
+          {
+            "code": "$MTY47",
+            "description": "Model Y Long Range AWD",
+            "group": "TRIM",
+            "long_name": "Model Y Long Range Çift Motor Dört Çeker",
+            "name": "Long Range Dört Çeker",
+            "price": 1799990
+          },
+          {
+            "code": "$STY5S",
+            "description": "Beş Koltuklu İç Mekan",
+            "group": "REAR_SEATS",
+            "long_name": "Beş Koltuklu İç Mekan",
+            "name": "Beş Koltuklu İç Mekan"
+          },
+          {
+            "code": "$CPF0",
+            "description": "Standart Bağlantı",
+            "group": "CONNECTIVITY",
+            "long_name": "Standart Bağlantı",
+            "name": "Standart Bağlantı"
+          }
+        ],
+        "OptionCodeList": "$APBS,$IPB8,$PPSW,$SC04,$MDLY,$WY19P,$MTY47,$STY5S,$CPF0",
+        "OptionCodeListDisplayOnly": null,
+        "OptionCodePricing": [
+          {
+            "code": "$MDLY",
+            "group": "MODEL",
+            "price": 0
+          },
+          {
+            "code": "$APBS",
+            "group": "AUTOPILOT_PACKAGE",
+            "price": 0
+          },
+          {
+            "code": "$CPF0",
+            "group": "CONNECTIVITY",
+            "price": 0
+          },
+          {
+            "code": "$PPSW",
+            "group": "PAINT",
+            "price": 0
+          },
+          {
+            "code": "$STY5S",
+            "group": "REAR_SEATS",
+            "price": 0
+          },
+          {
+            "code": "$SC04",
+            "group": "SUPER_CHARGER",
+            "price": 0
+          },
+          {
+            "code": "$WY19P",
+            "group": "WHEELS",
+            "price": 0
+          },
+          {
+            "code": "$IPB8",
+            "group": "INTERIOR",
+            "price": 0
+          },
+          {
+            "code": "$MTY47",
+            "group": "TRIM",
+            "price": 1799990
+          }
+        ],
+        "OrderFee": {
+          "type": "non_refundable_order_payment",
+          "value": 50000
+        },
+        "OriginalDeliveryDate": null,
+        "OriginalInCustomerGarageDate": null,
+        "PAINT": [
+          "WHITE"
+        ],
+        "PreviouslyRegistered": false,
+        "Price": 3465581,
+        "PurchasePrice": 1799990,
+        "ROOF": null,
+        "RegistrationCount": 0,
+        "STEERING_WHEEL": null,
+        "TRIM": [
+          "LRAWD"
+        ],
+        "TaxScheme": null,
+        "ThirdPartyHistoryUrl": null,
+        "TitleStatus": "NEW",
+        "TitleSubtype": [
+          "BRANDNEW"
+        ],
+        "TotalPrice": 3465581,
+        "TradeInType": null,
+        "TransportFees": {
+          "exemptVRL": [],
+          "fees": [],
+          "metro_fees": [],
+          "trt_to_trt_fees": []
+        },
+        "TrimCode": "$MTY47",
+        "TrimName": "Long Range Dört Çeker",
+        "TrimVariantCode": "LR_AWD_NV36",
+        "Trt": 32020,
+        "VIN": "XP7Y242_f323f97f8c31df9f410993a75ad6e5d8",
+        "VehicleHistory": null,
+        "WHEELS": [
+          "NINETEEN"
+        ],
+        "WarrantyBatteryExpDate": "0001-01-01T00:00:00Z",
+        "WarrantyBatteryIsExpired": false,
+        "WarrantyBatteryMile": 192000,
+        "WarrantyBatteryYear": 8,
+        "WarrantyData": {
+          "UsedVehicleLimitedWarrantyMile": 0,
+          "UsedVehicleLimitedWarrantyYear": 0,
+          "WarrantyBatteryExpDate": "0001-01-01T00:00:00Z",
+          "WarrantyBatteryIsExpired": false,
+          "WarrantyBatteryMile": 192000,
+          "WarrantyBatteryYear": 8,
+          "WarrantyDriveUnitExpDate": "0001-01-01T00:00:00Z",
+          "WarrantyDriveUnitMile": 192000,
+          "WarrantyDriveUnitYear": 8,
+          "WarrantyMile": 80000,
+          "WarrantyVehicleExpDate": "0001-01-01T00:00:00Z",
+          "WarrantyVehicleIsExpired": false,
+          "WarrantyYear": 4
+        },
+        "WarrantyDriveUnitExpDate": "0001-01-01T00:00:00Z",
+        "WarrantyDriveUnitMile": 192000,
+        "WarrantyDriveUnitYear": 8,
+        "WarrantyMile": 80000,
+        "WarrantyVehicleExpDate": "0001-01-01T00:00:00Z",
+        "WarrantyVehicleIsExpired": false,
+        "WarrantyYear": 4,
+        "Year": 2025,
+        "AlternateCurrency": [],
+        "UsedVehicleLimitedWarrantyMile": 0,
+        "UsedVehicleLimitedWarrantyYear": 0,
+        "OdometerTypeShort": "km",
+        "DeliveryDateDisplay": true,
+        "TransportationFee": 0,
+        "vrlList": [
+          {
+            "vrl": 0,
+            "lat": 0,
+            "lon": 0,
+            "vrlLocks": []
+          }
+        ],
+        "OptionCodeSpecs": {
+          "C_SPECS": {
+            "code": "C_SPECS",
+            "name": "Specs",
+            "options": [
+              {
+                "code": "SPECS_RANGE",
+                "name": "586 km",
+                "long_name": "586 kilometre",
+                "description": "Menzil (WLTP)",
+                "lexiconGroup": "SPECS_RANGE"
+              },
+              {
+                "code": "SPECS_TOP_SPEED",
+                "name": "201 km/s",
+                "long_name": "201 kilometre/saat",
+                "description": "Azami Hız",
+                "lexiconGroup": "SPECS_TOP_SPEED"
+              },
+              {
+                "code": "SPECS_ACCELERATION",
+                "name": "4,8 sn",
+                "long_name": "4,8 saniye",
+                "description": "0-100 km/s",
+                "lexiconGroup": "SPECS_ACCELERATION"
+              }
+            ]
+          },
+          "C_DESIGN": {
+            "code": "C_DESIGN",
+            "name": "Design",
+            "options": []
+          },
+          "C_CALLOUTS": {
+            "code": "C_CALLOUTS",
+            "name": "Callout Features",
+            "options": [
+              {
+                "code": "$APBS",
+                "name": "Otopilot",
+                "long_name": "",
+                "description": "Otopilot",
+                "lexiconGroup": "AUTOPILOT",
+                "group": "AUTOPILOT"
+              },
+              {
+                "code": "PCT1M",
+                "name": "30 Gün Premium Bağlantı Denemesi",
+                "description": "30 Gün Premium Bağlantı Denemesi",
+                "group": "CONNECTIVITY",
+                "list": [
+                  "satelliteMaps",
+                  "musicStreaming",
+                  "videoStreaming",
+                  "caraoke",
+                  "internetBrowser"
+                ],
+                "period": "30 Gün"
+              }
+            ]
+          },
+          "C_OPTS": {
+            "code": "C_OPTS",
+            "name": "Options",
+            "options": [
+              {
+                "code": "$PPSW",
+                "name": "Pearl White Renk",
+                "long_name": "",
+                "description": "Pearl White",
+                "lexiconGroup": "PAINT"
+              },
+              {
+                "code": "$WY19P",
+                "name": "19\" Crossflow Jantlar",
+                "long_name": "",
+                "description": "19\" Crossflow Jantlar",
+                "lexiconGroup": "WHEELS"
+              },
+              {
+                "code": "$IPB8",
+                "name": "All Black Premium İç Mekan",
+                "long_name": "",
+                "description": "All Black Premium İç Mekan",
+                "lexiconGroup": "INTERIOR"
+              },
+              {
+                "code": "$STY5S",
+                "name": "Beş Koltuklu İç Mekan",
+                "long_name": "",
+                "description": "Beş Koltuklu İç Mekan",
+                "lexiconGroup": "REAR_SEATS"
+              },
+              {
+                "code": "$APBS",
+                "name": "Otopilot",
+                "long_name": "",
+                "description": "Otopilot",
+                "lexiconGroup": "AUTOPILOT"
+              }
+            ]
+          }
+        },
+        "CompositorViewsCustom": {
+          "isProductWithCustomViews": false,
+          "externalZoom": {
+            "order": 1,
+            "search": 1
+          },
+          "externalCrop": {
+            "order": "1400,850,250,150",
+            "search": "1400,850,300,130"
+          }
+        },
+        "IsRangeStandard": true,
+        "geoPoints": [
+          [
+            "0,0",
+            0]
+        ],
+        "HasMarketingOptions": true
+      }
+    ],
+    "total_matches_found": "2"
+  }

@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Tesla Envanter Takip ve Sipariş Asistanı",
+  "version": "0.1.0",
+  "description": "Tesla envanterini takip eder, uygun araç bulunduğunda sipariş sürecini hızlandırır.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs",
+    "notifications",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.tesla.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "images/16.png",
+      "48": "images/48.png",
+      "128": "images/128.png"
+    }
+  },
+  "icons": {
+    "16": "images/16.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.tesla.com/tr_TR/inventory/new/my*", "https://www.tesla.com/tr_TR/my/order/*"],
+      "js": ["content_scripts/common.js"],
+      "css": ["content_scripts/style.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.tesla.com/tr_TR/inventory/new/my*"],
+      "js": ["content_scripts/content_inventory.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.tesla.com/tr_TR/my/order/*"],
+      "js": ["content_scripts/content_order.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+} 

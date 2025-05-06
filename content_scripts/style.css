@@ -1,0 +1,63 @@
+/* Tesla Envanter Takip ve Sipariş Asistanı - content_scripts/style.css */
+
+/* Enjekte Edilen Durum Paneli Stilleri */
+#tesla-assist-status-panel {
+  position: fixed;
+  bottom: 10px; /* Altta veya üstte olabilir, PRD'ye göre üstteydi */
+  right: 10px; /* Veya left: 10px; top: 10px; */
+  width: 280px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 99999; /* Diğer elementlerin üzerinde kalması için */
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #333;
+  padding: 0;
+}
+
+.tas-panel-header {
+  background-color: #e7e7e7;
+  padding: 8px 12px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.tas-panel-content {
+  padding: 12px;
+}
+
+.tas-panel-content p {
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.tas-panel-content span {
+  font-weight: bold;
+  color: #0056b3;
+}
+
+#tas-toggle-tracking-content {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+#tas-toggle-tracking-content:hover {
+  background-color: #0056b3;
+}
+
+/* Sipariş sayfasında odaklanan buton için stil (isteğe bağlı) */
+.tas-focused-button-highlight {
+  border: 3px solid red !important; /* Diğer stilleri ezmek için !important */
+  box-shadow: 0 0 10px red !important;
+} 
