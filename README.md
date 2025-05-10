@@ -48,4 +48,12 @@ Bu eklenti, Tesla Türkiye'nin Model Y Juniper stoklarını otomatik olarak taki
 
 ---
 
+## Yasal Uyarı / Legal Disclaimer
+
+**Türkçe:**
+Bu proje tamamen hobi amaçlı, açık kaynak bir yazılım geliştirme çalışmasıdır. Hiçbir şekilde Tesla, Inc. veya Tesla Türkiye ile resmi bir bağlantısı yoktur. Eklentinin kullanımı sonucunda doğabilecek her türlü risk, zarar veya hukuki sorumluluk kullanıcıya aittir. Geliştirici, yazılımın kullanımından doğabilecek doğrudan veya dolaylı hiçbir zarardan sorumlu tutulamaz. Lütfen bu yazılımı kullanmadan önce kendi sorumluluğunuzda hareket ettiğinizi unutmayın.
+
+**English:**
+This project is a hobby, open-source software development effort and is not affiliated with Tesla, Inc. or Tesla Turkey in any way. Any risk, damage, or legal responsibility arising from the use of this extension is solely the user's responsibility. The developer cannot be held liable for any direct or indirect damages resulting from the use of this software. Please be aware that you use this software at your own risk.
+
 Her türlü öneri ve katkı için Github üzerinden issue veya pull request açabilirsiniz. 
