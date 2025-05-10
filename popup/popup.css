@@ -156,6 +156,20 @@ button:hover {
   color: #1a73e8;
 }
 
+.vehicle-selection-scrollable {
+  max-height: 320px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+}
+
+#saveTargetVehicle {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+
 @media (max-width: 480px) {
   body {
     width: 100%;
