@@ -1,0 +1,20 @@
+# GITIGNORE for Tesla Model Y Juniper Stok Takip Eklentisi
+
+# Test ve örnekler
+samples/
+
+# MacOS
+.DS_Store
+
+# Node.js (geliştirici için)
+node_modules/
+
+# Çevresel değişkenler ve anahtarlar
+.env
+*.pem
+
+# Log dosyaları
+*.log
+
+# Diğer geçici dosyalar
+*.tmp 

@@ -8,7 +8,8 @@
     "alarms",
     "tabs",
     "notifications",
-    "scripting"
+    "scripting",
+    "cookies"
   ],
   "host_permissions": [
     "https://www.tesla.com/*"
@@ -31,19 +32,9 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.tesla.com/tr_TR/inventory/new/my*", "https://www.tesla.com/tr_TR/my/order/*"],
-      "js": ["content_scripts/common.js"],
-      "css": ["content_scripts/style.css"],
-      "run_at": "document_idle"
-    },
-    {
-      "matches": ["https://www.tesla.com/tr_TR/inventory/new/my*"],
-      "js": ["content_scripts/content_inventory.js"],
-      "run_at": "document_idle"
-    },
-    {
       "matches": ["https://www.tesla.com/tr_TR/my/order/*"],
-      "js": ["content_scripts/content_order.js"],
+      "js": ["content_scripts/common.js", "content_scripts/content_order.js"],
+      "css": ["content_scripts/style.css"],
       "run_at": "document_idle"
     }
   ],

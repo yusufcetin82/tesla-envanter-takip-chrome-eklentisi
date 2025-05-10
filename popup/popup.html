@@ -1,73 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Tesla Takip Ayarları</title>
   <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
-<body>
+<body style="width:420px;min-width:420px;">
   <div class="container">
     <h1>Tesla Envanter Asistanı</h1>
 
     <div class="tabs">
-      <button class="tablink active" onclick="openTab(event, 'tabSettings')">Ayarlar</button>
-      <button class="tablink" onclick="openTab(event, 'tabCarCriteria')">Araç Kriterleri</button>
-      <button class="tablink" onclick="openTab(event, 'tabFormIndividual')">Bireysel Form</button>
-      <button class="tablink" onclick="openTab(event, 'tabFormCorporate')">Kurumsal Form</button>
-      <button class="tablink" onclick="openTab(event, 'tabStatus')">Durum</button>
+      <button class="tablink active" data-tabid="tabSettings">Genel Ayarlar</button>
+      <button class="tablink" data-tabid="tabTargetVehicle">Hedef Araç</button>
+      <button class="tablink" data-tabid="tabStatus">Durum</button>
     </div>
 
     <div id="tabSettings" class="tabcontent" style="display:block;">
       <h2>Genel Ayarlar</h2>
       <div>
         <label for="trackingInterval">Kontrol Aralığı (saniye):</label>
-        <input type="number" id="trackingInterval" name="trackingInterval" min="10" value="30">
+        <input type="number" id="trackingInterval" name="trackingInterval" min="30" value="60">
       </div>
-      <div>
-        <label for="zipCode">Posta Kodu:</label>
-        <input type="text" id="zipCode" name="zipCode" placeholder="örn: 34010">
-      </div>
-      <button id="saveSettings">Ayarları Kaydet</button>
+      <button id="saveSettings">Genel Ayarları Kaydet</button>
       <hr>
       <h2>İzleme Kontrolü</h2>
       <button id="toggleTracking">İzlemeyi Başlat</button>
       <p>Durum: <span id="trackingStatus">Durduruldu</span></p>
     </div>
 
-    <div id="tabCarCriteria" class="tabcontent">
-      <h2>Araç Kriterleri</h2>
-      <div>
-        <label for="model">Model:</label>
-        <input type="text" id="model" name="model" value="my" placeholder="örn: my, m3">
+    <div id="tabTargetVehicle" class="tabcontent">
+      <h2>Model Y Juniper</h2>
+      <div class="vehicle-selection">
+        <div class="vehicle-group">
+          <div class="vehicle-options">
+            <label class="vehicle-option">
+              <input type="radio" name="vehicle" value="XP7Y242_d6b436829f02d46399d20ad3f5b7dd45">
+              <div class="vehicle-info">
+                <span class="vehicle-name">Stealth Grey / All Black Premium</span>
+                <span class="vehicle-price">1.866.203 TL</span>
+              </div>
+            </label>
+            <label class="vehicle-option">
+              <input type="radio" name="vehicle" value="XP7Y242_6023568e594cffc23735d229a816f818">
+              <div class="vehicle-info">
+                <span class="vehicle-name">Ultra Red / All Black Premium</span>
+                <span class="vehicle-price">1.909.116 TL</span>
+              </div>
+            </label>
+            <label class="vehicle-option">
+              <input type="radio" name="vehicle" value="XP7Y242_aa3fa079d482b1199cc2fac3742681ef">
+              <div class="vehicle-info">
+                <span class="vehicle-name">Deep Blue Metallic / All Black Premium</span>
+                <span class="vehicle-price">1.909.116 TL</span>
+              </div>
+            </label>
+            <label class="vehicle-option">
+              <input type="radio" name="vehicle" value="XP7Y242_c9c317526aa0cd8ef043e0bf54127e1b">
+              <div class="vehicle-info">
+                <span class="vehicle-name">Quicksilver / All Black Premium</span>
+                <span class="vehicle-price">1.909.116 TL</span>
+              </div>
+            </label>
+            <label class="vehicle-option">
+              <input type="radio" name="vehicle" value="XP7Y242_cf7f4d88690c8bfc108edd011ad53814">
+              <div class="vehicle-info">
+                <span class="vehicle-name">Pearl White / All Black Premium</span>
+                <span class="vehicle-price">1.909.116 TL</span>
+              </div>
+            </label>
+            <label class="vehicle-option">
+              <input type="radio" name="vehicle" value="XP7Y242_f4c3044c272bcbd3e2d21651749fdc1a">
+              <div class="vehicle-info">
+                <span class="vehicle-name">Solid Black / All Black Premium</span>
+                <span class="vehicle-price">1.909.116 TL</span>
+              </div>
+            </label>
+            <label class="vehicle-option">
+              <input type="radio" name="vehicle" value="XP7Y242_1ee55cede3ea951b10b5a1951c5882ae">
+              <div class="vehicle-info">
+                <span class="vehicle-name">Stealth Grey / Siyah & Beyaz Premium</span>
+                <span class="vehicle-price">1.913.604 TL</span>
+              </div>
+            </label>
+          </div>
+        </div>
       </div>
-      <div>
-        <label for="color">Renk (virgülle ayırın):</label>
-        <input type="text" id="color" name="color" placeholder="örn: Quicksilver, Beyaz">
-      </div>
-      <div>
-        <label for="maxPrice">Maksimum Fiyat (TRY):</label>
-        <input type="number" id="maxPrice" name="maxPrice" placeholder="örn: 3500000">
-      </div>
-      <button id="saveCarCriteria">Kriterleri Kaydet</button>
-    </div>
-
-    <div id="tabFormIndividual" class="tabcontent">
-      <h2>Bireysel Form Bilgileri</h2>
-      <p>Doldurulacak alanlar buraya gelecek...</p>
-      <button id="saveFormIndividual">Bireysel Formu Kaydet</button>
-    </div>
-
-    <div id="tabFormCorporate" class="tabcontent">
-      <h2>Kurumsal Form Bilgileri</h2>
-      <p>Doldurulacak alanlar buraya gelecek...</p>
-      <button id="saveFormCorporate">Kurumsal Formu Kaydet</button>
+      <button id="saveTargetVehicle">Hedef Aracı Kaydet</button>
     </div>
 
     <div id="tabStatus" class="tabcontent">
       <h2>Eklenti Durumu</h2>
       <p>Son Kontrol: <span id="lastCheckTime">-</span></p>
       <p>Toplam Kontrol: <span id="totalChecks">0</span></p>
-      <p>Bulunan Araç Sayısı: <span id="foundCarsCount">0</span></p>
-      <p>API Durumu: <span id="apiStatus">-</span></p>
+      <p>URL Durumu: <span id="targetUrlStatus">-</span></p>
     </div>
 
   </div>

@@ -1,86 +1,164 @@
 body {
-  font-family: sans-serif;
   width: 400px;
-  padding: 10px;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  max-width: 100%;
 }
 
 h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+h2 {
   font-size: 1.2em;
-  text-align: center;
-  margin-bottom: 15px;
+  margin: 15px 0;
+  color: #444;
+}
+
+h3 {
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #555;
 }
 
 .tabs {
-  overflow: hidden;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 10px;
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
 }
 
 .tablink {
-  background-color: #f1f1f1;
-  float: left;
+  padding: 10px 15px;
   border: none;
-  outline: none;
+  background: none;
   cursor: pointer;
-  padding: 8px 12px;
-  transition: 0.3s;
-  font-size: 0.9em;
+  font-size: 1em;
+  color: #666;
+  transition: all 0.3s ease;
 }
 
 .tablink:hover {
-  background-color: #ddd;
+  color: #333;
+  background-color: #f5f5f5;
 }
 
 .tablink.active {
-  background-color: #ccc;
+  color: #1a73e8;
+  border-bottom: 2px solid #1a73e8;
 }
 
 .tabcontent {
   display: none;
-  padding: 6px 12px;
-  border-top: none;
+  padding: 15px 0;
 }
 
-.tabcontent h2 {
-  font-size: 1.1em;
-  margin-top: 0;
-}
-
-label {
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 3px;
-  font-size: 0.9em;
-}
-
+input[type="number"],
 input[type="text"],
-input[type="number"] {
-  width: 95%;
+input[type="url"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
   padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
+  margin: 5px 0 15px;
+  border: 1px solid #ddd;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 button {
-  background-color: #007bff;
+  background-color: #1a73e8;
   color: white;
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #1557b0;
 }
 
-#trackingStatus, #lastCheckTime, #totalChecks, #foundCarsCount, #apiStatus {
+.vehicle-selection {
+  margin: 15px 0;
+}
+
+.vehicle-group {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.vehicle-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.vehicle-option {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vehicle-option:hover {
+  background-color: #f0f0f0;
+  border-color: #1a73e8;
+}
+
+.vehicle-option input[type="radio"] {
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+}
+
+.vehicle-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.vehicle-name {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.vehicle-price {
+  color: #1a73e8;
+  font-weight: 600;
+}
+
+#tabStatus p {
+  margin: 10px 0;
+  padding: 8px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+#trackingStatus {
   font-weight: bold;
+  color: #1a73e8;
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 100%;
+    padding: 10px;
+  }
 } 

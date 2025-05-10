@@ -1,33 +1,51 @@
-# Tesla Envanter Takip ve Sipariş Asistanı
+# Tesla Model Y Juniper Stok Takip Chrome Eklentisi
 
-Bu Chrome eklentisi, Tesla Türkiye envanter web sitesini sizin belirlediğiniz kriterlere göre takip eder.
-Uygun bir araç bulunduğunda sizi bilgilendirir, aracın sipariş sayfasına yönlendirir ve önceden tanımladığınız form bilgilerini doldurarak sipariş sürecini hızlandırmanıza yardımcı olur.
+## Amaç
+Bu eklenti, Tesla Türkiye'nin Model Y Juniper stoklarını otomatik olarak takip eder. Seçtiğiniz renk ve donanımda bir araç stokta göründüğünde size bildirim gönderir ve sipariş sayfasını otomatik olarak yeni bir sekmede açar.
 
-## Kurulum
+## Özellikler
+- Sadece Model Y Juniper (belirli VIN'ler) için çalışır.
+- Araç ve renk seçimi popup arayüzünden kolayca yapılır.
+- Kontrol aralığı (saniye cinsinden) ayarlanabilir.
+- Araç bulunduğunda masaüstü bildirimi ve otomatik sipariş sekmesi açılır.
+- Durum sekmesinde son kontrol zamanı ve sonuçları görüntülenir.
+- Hiçbir kişisel veri dışarıya gönderilmez, tüm işlemler tarayıcıda gerçekleşir.
 
-1.  Bu repoyu bilgisayarınıza klonlayın veya ZIP olarak indirin.
-2.  Chrome tarayıcınızı açın ve adres çubuğuna `chrome://extensions` yazın.
-3.  Sağ üst köşedeki "Geliştirici modu" (Developer mode) seçeneğini aktif hale getirin.
-4.  "Paketlenmemiş öğe yükle" (Load unpacked) butonuna tıklayın.
-5.  Açılan pencerede eklentinin bulunduğu klasörü (bu README.md dosyasının olduğu ana klasör) seçin.
-6.  Eklenti yüklenecek ve Chrome araç çubuğunda ikonu görünecektir.
+## Kurulum ve Kullanım
+1. **Github'dan İndir:**
+   - Sağ üstteki "Code" butonuna tıklayın, "Download ZIP" seçeneğiyle dosyaları indirin.
+   - ZIP dosyasını bilgisayarınızda bir klasöre çıkarın.
+2. **Chrome'da Geliştirici Modunu Açın:**
+   - Chrome'da `chrome://extensions` adresine gidin.
+   - Sağ üstte "Geliştirici modu"nu aktif edin.
+3. **Eklentiyi Yükleyin:**
+   - "Paketlenmemiş öğe yükle" butonuna tıklayın.
+   - Az önce çıkardığınız klasörü seçin (içinde `manifest.json` olmalı).
+4. **Eklentiyi Kullanın:**
+   - Tarayıcı araç çubuğunda Tesla logosuna tıklayın.
+   - "Hedef Araç" sekmesinden istediğiniz Model Y Juniper'ı seçin ve kaydedin.
+   - "Genel Ayarlar"dan kontrol aralığını belirleyin ve kaydedin.
+   - "İzlemeyi Başlat" butonuna tıklayın.
+   - Araç stokta göründüğünde otomatik olarak bildirim alırsınız ve sipariş sayfası açılır.
 
-## Kullanım
+## Sıkça Sorulan Sorular
+- **Neden otomatik sipariş vermiyor?**
+  - Güvenlik ve yasal nedenlerle eklenti sadece sizi bilgilendirir ve sipariş sayfasını açar. Siparişi tamamlamak için manuel işlem gerekir.
+- **Neden sadece Model Y Juniper?**
+  - VIN'ler sabit olduğu için sadece bu araçlar için güvenilir takip mümkündür.
+- **Başka model/renk ekleyebilir miyim?**
+  - Kodda ilgili bölüme yeni VIN ve renk ekleyerek genişletebilirsiniz.
+- **Verilerim güvende mi?**
+  - Evet, hiçbir veri dışarıya gönderilmez. Tüm işlemler tarayıcıda ve sizin bilgisayarınızda gerçekleşir.
 
-Eklenti ikonuna tıklayarak ayarlar panelini açabilirsiniz. Buradan:
+## Teknik Gereksinimler
+- Google Chrome (veya Chromium tabanlı tarayıcı)
+- İnternet bağlantısı
 
--   İzlemek istediğiniz araç kriterlerini (model, renk, maksimum fiyat vb.) belirleyebilirsiniz.
--   API kontrol sıklığını ve posta kodunuzu ayarlayabilirsiniz.
--   Sipariş sayfasında otomatik doldurulacak bireysel veya kurumsal form bilgilerinizi girebilirsiniz.
--   İzleme işlemini başlatıp durdurabilirsiniz.
--   Eklentinin genel çalışma durumunu takip edebilirsiniz.
+## Geliştirici Notu
+- `samples/` klasörü test ve örnek HTML için kullanılır, repoya dahil edilmez.
+- Kodun tamamı açık kaynak ve özelleştirilebilir.
 
-Detaylı gereksinimler için `docs/PRD.md` dosyasına bakınız.
+---
 
-## Katkıda Bulunma
-
-Katkılarınız için lütfen bir issue açın veya pull request gönderin.
-
-## Lisans
-
-Bu proje MIT Lisansı altındadır. 
+Her türlü öneri ve katkı için Github üzerinden issue veya pull request açabilirsiniz. 
