@@ -4,6 +4,36 @@
   <meta charset="UTF-8">
   <title>Tesla Takip Ayarları</title>
   <link rel="stylesheet" type="text/css" href="popup.css">
+  <style>
+    .form-tab {
+      display: none;
+    }
+    .form-tab.active {
+      display: block;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .form-section {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .form-section h3 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body style="width:420px;min-width:420px;">
   <div class="container">
@@ -12,6 +42,7 @@
     <div class="tabs">
       <button class="tablink active" data-tabid="tabSettings">Genel Ayarlar</button>
       <button class="tablink" data-tabid="tabTargetVehicle">Hedef Araç</button>
+      <button class="tablink" data-tabid="tabFormInfo">Form Bilgileri</button>
       <button class="tablink" data-tabid="tabStatus">Durum</button>
     </div>
 
@@ -88,6 +119,118 @@
       <button id="saveTargetVehicle">Hedef Aracı Kaydet</button>
     </div>
 
+    <div id="tabFormInfo" class="tabcontent">
+      <h2>Sipariş Formu Bilgileri</h2>
+      
+      <div class="form-section">
+        <h3>Kişisel Bilgiler</h3>
+        <div class="form-group">
+          <label for="tc_kimlik">TC Kimlik No:</label>
+          <input type="text" id="tc_kimlik" maxlength="11">
+        </div>
+        <div class="form-group">
+          <label for="ad">Ad:</label>
+          <input type="text" id="ad">
+        </div>
+        <div class="form-group">
+          <label for="soyad">Soyad:</label>
+          <input type="text" id="soyad">
+        </div>
+        <div class="form-group">
+          <label for="email">E-posta:</label>
+          <input type="email" id="email">
+        </div>
+        <div class="form-group">
+          <label for="emailonay">E-posta (Tekrar):</label>
+          <input type="email" id="emailonay">
+        </div>
+        <div class="form-group">
+    <label for="telefon">Telefon:</label>
+    <input type="tel" id="telefon" placeholder="535 768 55 33" 
+           pattern="[0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" 
+           title="Örnek: 535 768 55 33">
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>Ödeme Bilgileri</h3>
+        <div class="form-group">
+          <label for="kart_adsoyad">Kart Üzerindeki İsim:</label>
+          <input type="text" id="kart_adsoyad">
+        </div>
+        <div class="form-group">
+    <label for="kart_numarasi">Kart Numarası:</label>
+    <input type="text" id="kart_numarasi" 
+           placeholder="5295 7201 8235 1787"
+           pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
+           title="Örnek: 5295 7201 8235 1787">
+        </div>
+        <div class="form-group">
+          <label>Son Kullanma Tarihi:</label>
+          <div style="display: flex; gap: 10px;">
+            <select id="kart_ay" style="flex: 1;">
+              <option value="">Ay</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>			  
+              <option value="05">05</option>
+              <option value="06">06</option>			  
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>			  
+            </select>
+            <select id="kart_yil" style="flex: 1;">
+              <option value="">Yıl</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2031">2031</option>			  
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="kart_cvv">CVV:</label>
+          <input type="text" id="kart_cvv" maxlength="3">
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>Adres Bilgileri</h3>
+        <div class="form-group">
+          <label for="ulke">Ülke:</label>
+          <select id="ulke">
+            <option value="TR">Türkiye</option>
+            <!-- Diğer ülkeler -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="adres">Adres:</label>
+          <input type="text" id="adres">
+        </div>
+        <div class="form-group">
+          <label for="posta_kodu">Posta Kodu:</label>
+          <input type="text" id="posta_kodu">
+        </div>
+        <div class="form-group">
+          <label for="ilce">İlçe:</label>
+          <input type="text" id="ilce">
+        </div>
+        <div class="form-group">
+          <label for="vilayet">İl:</label>
+          <input type="text" id="vilayet">
+        </div>
+      </div>
+
+      <button id="saveFormData">Form Bilgilerini Kaydet</button>
+    </div>
+
     <div id="tabStatus" class="tabcontent">
       <h2>Eklenti Durumu</h2>
       <p>Son Kontrol: <span id="lastCheckTime">-</span></p>
@@ -98,4 +241,4 @@
   </div>
   <script src="popup.js"></script>
 </body>
-</html> 
+</html>

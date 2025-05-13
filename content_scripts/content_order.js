@@ -1,80 +1,130 @@
 // Tesla Envanter Takip ve Sipariş Asistanı - content_scripts/content_order.js
-
 console.log("Tesla Asistanı - Sipariş Sayfası İçerik Scripti Yüklendi");
 
-// PRD 5.4: Otomatik Form Doldurma
-// PRD 5.5: Son Butona Odaklanma
-
-async function fillOrderForm() {
-  console.log("Sipariş formu doldurma işlemi başlıyor...");
-
-  const storedData = await chrome.storage.local.get([
-    'customerType', // 'individual' veya 'corporate'
-    'formIndividual',
-    'formCorporate'
-  ]);
-
-  if (chrome.runtime.lastError) {
-    console.error("Storage'dan veri okuma hatası:", chrome.runtime.lastError.message);
-    return;
-  }
-
-  const customerType = storedData.customerType;
-  const formData = customerType === 'corporate' ? storedData.formCorporate : storedData.formIndividual;
-
-  if (!formData) {
-    console.warn("Doldurulacak form verisi bulunamadı. Lütfen eklenti ayarlarını kontrol edin.");
-    return;
-  }
-
-  console.log(`Müşteri Tipi: ${customerType}, Form Verisi:`, formData);
-
-  // --- Form Doldurma Mantığı ---
-  // Bu kısım Tesla sipariş sayfasının HTML yapısına göre özelleştirilecek.
-  // Kullanıcıdan alınacak element seçicileri (ID, name, class, XPath) burada kullanılacak.
-  // Örnekler (gerçek seçiciler farklı olacaktır):
-
-  // waitForElement('#firstName', (el) => { if(el && formData.firstName) el.value = formData.firstName; });
-  // waitForElement('#lastName', (el) => { if(el && formData.lastName) el.value = formData.lastName; });
-  // waitForElement('#email', (el) => { if(el && formData.email) el.value = formData.email; });
-
-  // if (customerType === 'individual') {
-  //   waitForElement('#tcKimlikNo', (el) => { if(el && formData.tcKimlik) el.value = formData.tcKimlik; });
-  // } else {
-  //   waitForElement('#vergiNo', (el) => { if(el && formData.vergiNo) el.value = formData.vergiNo; });
-  // }
-  
-  // TODO: PRD'de belirtilen tüm bireysel ve kurumsal alanlar için doldurma mantığı eklenecek.
-  // Ad, Soyad, TC/VergiNo, E-posta, Telefon, Adres (İl, İlçe, Mahalle, Detay)
-  // Her bir alan için waitForElement kullanılabilir veya sayfa yapısı stabil ise doğrudan querySelector.
-
-  console.log("Form alanları (deneme amaçlı) dolduruldu.");
-
-  // TODO: PRD'ye göre gerekli ara tıklamalar (varsa) burada yapılacak.
-  // waitForElement('#devamButonu', (el) => { if(el) el.click(); });
-
-  // PRD 5.5: Son siparişi tamamlama butonuna fokuslanma
-  // waitForElement('#finalOrderButton', (el) => { 
-  //   if(el) { 
-  //     el.focus(); 
-  //     console.log("Son sipariş butonuna odaklanıldı.");
-  //     // İsteğe bağlı: Butonun etrafına bir çerçeve ekleyerek vurgulayabiliriz.
-  //     el.style.border = "3px solid red"; 
-  //   }
-  // });
-
-  alert("Tesla Asistanı: Form doldurma tamamlandı (simülasyon). Gerçek sitede seçiciler ayarlanmalı!");
+// Helper fonksiyonları
+function waitForElement(selector, callback, timeout = 10000) {
+  const startTime = Date.now();
+  const interval = setInterval(() => {
+    const element = document.querySelector(selector);
+    if (element) {
+      clearInterval(interval);
+      callback(element);
+    } else if (Date.now() - startTime > timeout) {
+      clearInterval(interval);
+      console.warn(`Element ${selector} bulunamadı`);
+    }
+  }, 100);
 }
 
-// Sipariş sayfası tam olarak yüklendiğinde veya belirli bir işaretçi element göründüğünde formu doldurmaya başla.
-// Bu, sayfanın dinamik yüklenme durumlarına göre ayarlanmalı.
-// Örn: waitForElement('#siparisFormuBaslangicElementi', fillOrderForm);
-// Şimdilik DOMContentLoaded kullanalım, ancak bu yeterli olmayabilir.
-if (document.readyState === "complete" || document.readyState === "interactive") {
-  // Kısa bir gecikme ekleyerek sayfanın tam oturmasını bekleyebiliriz.
-  setTimeout(fillOrderForm, 2000); // 2 saniye bekle (ayarlanabilir)
-} else {
-  document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(fillOrderForm, 2000);
+function fillInput(selector, value) {
+  waitForElement(selector, (element) => {
+    element.value = value;
+    // Değişiklik event'lerini tetikle
+    const event = new Event('input', { bubbles: true });
+    element.dispatchEvent(event);
+    console.log(`Doldurulan alan: ${selector}, Değer: ${value}`);
   });
-} 
+}
+
+function selectDropdown(selector, value) {
+  waitForElement(selector, (element) => {
+    element.value = value;
+    const event = new Event('change', { bubbles: true });
+    element.dispatchEvent(event);
+    console.log(`Seçilen dropdown: ${selector}, Değer: ${value}`);
+  });
+}
+
+// Formatlama fonksiyonları
+function formatPhoneNumber(phone) {
+  if (!phone) return '';
+  const cleaned = phone.replace(/\D/g, '');
+  return cleaned.replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4');
+}
+
+function formatCreditCard(card) {
+  if (!card) return '';
+  const cleaned = card.replace(/\D/g, '');
+  return cleaned.replace(/(\d{4})(\d{4})(\d{4})(\d{4})/, '$1 $2 $3 $4');
+}
+
+// Ana form doldurma fonksiyonu
+async function fillOrderForm() {
+  console.log("Form doldurma işlemi başlıyor...");
+  
+  const { formData } = await chrome.storage.local.get(['formData']);
+  if (!formData) {
+    console.warn("Kayıtlı form verisi bulunamadı");
+    return;
+  }
+
+  console.log("Form verisi yüklendi:", formData);
+
+  // 1. KİŞİSEL BİLGİLER
+  fillInput("#privateVatId", formData.tc_kimlik);
+  fillInput("#FIRST_NAME", formData.ad);
+  fillInput("#LAST_NAME", formData.soyad);
+  fillInput("#EMAIL", formData.email);
+  fillInput("#confirm-email-textbox", formData.emailonay);
+  fillInput("#PHONE_NUMBER", formatPhoneNumber(formData.telefon));
+
+  // 2. ÖDEME BİLGİLERİ
+  fillInput("input[aria-describedby='nameOnTheInstrument-error-input-feedback']", formData.kart_adsoyad);
+  fillInput("input[aria-describedby='encryptedCardNumber-error-input-feedback']", formatCreditCard(formData.kart_numarasi));
+  
+  selectDropdown("select[aria-describedby='encryptedExpiryMonth-error-input-feedback']", formData.kart_ay);
+  selectDropdown("select[aria-describedby='encryptedExpiryYear-error-input-feedback']", formData.kart_yil);
+  fillInput("input[aria-describedby='email-error-input-feedback']", formData.eposta3);
+  fillInput("input[aria-describedby='encryptedSecurityCode-error-input-feedback']", formData.kart_cvv);
+
+  // 3. ADRES BİLGİLERİ
+  selectDropdown("select[name='countryCode']", formData.ulke);
+  fillInput("input[aria-describedby='street-error-input-feedback']", formData.adres);
+  fillInput("input[aria-describedby='zipCode-error-input-feedback']", formData.posta_kodu);
+  fillInput("input[aria-describedby='city-error-input-feedback']", formData.ilce);
+  fillInput("input[aria-describedby='stateProvince-error-input-feedback']", formData.vilayet);
+
+  // 4. ONAY KUTULARI (Varsa)
+  waitForElement("#PRIVACY_CONSENT", (el) => {
+    if (!el.checked) el.click();
+    console.log("Gizlilik politikası onaylandı");
+  });
+
+  // 5. FOCUS İŞLEMLERİ (PRD 5.5)
+  waitForElement("[data-id='order-button']", (el) => {
+    el.style.border = "3px solid #00ff00";
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    console.log("Sipariş butonuna odaklanıldı");
+  });
+
+  console.log("Form doldurma işlemi tamamlandı");
+}
+
+// Sayfa yüklendiğinde çalıştır
+const init = () => {
+  if (window.location.href.includes("/order/")) {
+    // Dinamik yüklenme için MutationObserver
+    const observer = new MutationObserver((mutations) => {
+      if (document.querySelector("#FIRST_NAME")) {
+        observer.disconnect();
+        setTimeout(fillOrderForm, 1500); // 1.5 sn ekstra bekle
+      }
+    });
+
+    observer.observe(document.body, { 
+      childList: true, 
+      subtree: true 
+    });
+
+    // Normal yükleme için
+    setTimeout(fillOrderForm, 3000);
+  }
+};
+
+// Sayfa hazır olduğunda başlat
+if (document.readyState === "complete") {
+  init();
+} else {
+  document.addEventListener("DOMContentLoaded", init);
+}
+console.log(`Doldurulan alan: ${selector}, Değer: ${value}`);
