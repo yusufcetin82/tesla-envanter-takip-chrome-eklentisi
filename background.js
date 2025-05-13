@@ -3,6 +3,9 @@
 const URL_CHECK_ALARM_NAME = 'teslaUrlCheck';
 const MIN_ALARM_PERIOD_MINUTES = 1; // Chrome alarmları için minimum periyot
 
+let checkInterval = 60; // Varsayılan 60 saniye
+let intervalId = null;
+
 // Eklenti ilk yüklendiğinde veya güncellendiğinde çalışır
 chrome.runtime.onInstalled.addListener(() => {
   console.log("Tesla URL Takip Eklentisi kuruldu/güncellendi.");
@@ -64,6 +67,19 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     fetchTeslaInventory().then(result => sendResponse(result));
     return true; // Asenkron yanıt için
   }
+
+  if (request.action === "startChecking") {
+    checkInterval = request.interval || 60; // Varsayılan 60 saniye
+    startChecking();
+    sendResponse({status: "started"});
+  } else if (request.action === "stopChecking") {
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+    sendResponse({status: "stopped"});
+  }
+
   return false; // Diğer mesaj türleri için senkron kalabilir
 });
 
@@ -178,5 +194,19 @@ async function updateStatusDisplay(statusData) {
 //     updateStatusDisplay(newStatus); // Zaten bu fonksiyon her şeyi yapar
 //   }
 // });
+
+// Interval'i başlat
+function startChecking() {
+  // Eğer önceki interval varsa temizle
+  if (intervalId) {
+    clearInterval(intervalId);
+  }
+  
+  // Yeni interval'i başlat (saniyeyi milisaniyeye çevir)
+  intervalId = setInterval(checkInventory, checkInterval * 1000);
+}
+
+// Sayfa yüklendiğinde interval'i başlat
+startChecking();
 
 console.log("Background script yüklendi ve dinlemede (URL Kontrol Modu)."); 
