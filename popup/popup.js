@@ -154,3 +154,97 @@ function updateStatusTabUI(lastStatusData) {
     document.getElementById('totalChecks').textContent = lastStatusData.totalChecks || '0';
     document.getElementById('targetUrlStatus').textContent = lastStatusData.pageStatus || lastStatusData.apiStatus || '-';
 } 
+
+// Form sekmesi için yeni kodlar
+document.querySelector('[data-tabid="tabFormInfo"]').addEventListener('click', function() {
+  loadFormData();
+});
+
+document.getElementById('saveFormData').addEventListener('click', function() {
+  const formData = {
+    tc_kimlik: document.getElementById('tc_kimlik').value,
+    ad: document.getElementById('ad').value,
+    soyad: document.getElementById('soyad').value,
+    email: document.getElementById('email').value,
+    emailonay: document.getElementById('emailonay').value,
+    telefon: document.getElementById('telefon').value,
+    kart_adsoyad: document.getElementById('kart_adsoyad').value,
+    kart_numarasi: document.getElementById('kart_numarasi').value,
+    kart_ay: document.getElementById('kart_ay').value,
+    kart_yil: document.getElementById('kart_yil').value,
+    kart_cvv: document.getElementById('kart_cvv').value,
+    ulke: document.getElementById('ulke').value,
+    adres: document.getElementById('adres').value,
+    posta_kodu: document.getElementById('posta_kodu').value,
+    ilce: document.getElementById('ilce').value,
+    vilayet: document.getElementById('vilayet').value
+  };
+
+  chrome.storage.local.set({ formData: formData }, function() {
+    alert('Form bilgileri kaydedildi!');
+  });
+});
+
+// Telefon numarası formatlama
+document.getElementById('telefon').addEventListener('input', function(e) {
+  let value = this.value.replace(/\D/g, '');
+  if (value.length > 10) value = value.substring(0, 10);
+  
+  let formatted = '';
+  for (let i = 0; i < value.length; i++) {
+    if (i === 3) formatted += ' ';
+    if (i === 6) formatted += ' ';
+    if (i === 8) formatted += ' ';
+    formatted += value[i];
+  }
+  this.value = formatted.trim();
+});
+
+// Kredi kartı formatlama
+document.getElementById('kart_numarasi').addEventListener('input', function(e) {
+  let value = this.value.replace(/\D/g, '');
+  if (value.length > 16) value = value.substring(0, 16);
+  
+  let formatted = '';
+  for (let i = 0; i < value.length; i++) {
+    if (i > 0 && i % 4 === 0) formatted += ' ';
+    formatted += value[i];
+  }
+  this.value = formatted.trim();
+});
+
+// Kayıt sırasında boşlukları kaldırma
+document.getElementById('saveFormData').addEventListener('click', function() {
+  const formData = {
+    // ... diğer alanlar ...
+    telefon: document.getElementById('telefon').value.replace(/\s/g, ''),
+    kart_numarasi: document.getElementById('kart_numarasi').value.replace(/\s/g, ''),
+    // ... diğer alanlar ...
+  };
+  
+  chrome.storage.local.set({ formData: formData });
+});
+
+function loadFormData() {
+  chrome.storage.local.get(['formData'], function(result) {
+    if (result.formData) {
+      const data = result.formData;
+      document.getElementById('tc_kimlik').value = data.tc_kimlik || '';
+      document.getElementById('ad').value = data.ad || '';
+      document.getElementById('soyad').value = data.soyad || '';
+      document.getElementById('email').value = data.email || '';
+      document.getElementById('emailonay').value = data.emailonay || '';
+      document.getElementById('telefon').value = data.telefon || '';
+      document.getElementById('kart_adsoyad').value = data.kart_adsoyad || '';
+      document.getElementById('kart_numarasi').value = data.kart_numarasi || '';
+      document.getElementById('kart_ay').value = data.kart_ay || '';
+      document.getElementById('kart_yil').value = data.kart_yil || '';
+      document.getElementById('kart_cvv').value = data.kart_cvv || '';
+      document.getElementById('ulke').value = data.ulke || 'TR';
+      document.getElementById('adres').value = data.adres || '';
+      document.getElementById('posta_kodu').value = data.posta_kodu || '';
+      document.getElementById('ilce').value = data.ilce || '';
+      document.getElementById('vilayet').value = data.vilayet || '';
+    }
+  });
+}
