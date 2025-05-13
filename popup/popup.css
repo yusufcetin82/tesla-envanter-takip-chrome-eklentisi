@@ -175,4 +175,71 @@ button:hover {
     width: 100%;
     padding: 10px;
   }
+}
+
+/* Sipariş Bilgileri Sekmesi Stilleri */
+#tabOrderForm .form-scrollable {
+  max-height: 300px; /* Ya da popup yüksekliğine göre ayarla */
+  overflow-y: auto;
+  padding-right: 10px; /* Kaydırma çubuğu için boşluk */
+  margin-bottom: 15px;
+}
+
+#tabOrderForm .form-section {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+#tabOrderForm .form-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+#tabOrderForm h3 {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#tabOrderForm label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+#tabOrderForm input[type="text"],
+#tabOrderForm input[type="email"],
+#tabOrderForm input[type="tel"],
+#tabOrderForm select {
+  width: calc(100% - 16px); /* Paddingi hesaba kat */
+  margin-bottom: 10px;
+}
+
+#tabOrderForm button {
+  width: 100%;
+  margin-top: 5px;
+}
+
+#tabOrderForm button.secondary {
+  background-color: #6c757d;
+}
+
+#tabOrderForm button.secondary:hover {
+  background-color: #5a6268;
+}
+
+/* İki sütunlu layout için (örneğin ay ve yıl seçimi) */
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row > div {
+  flex: 1;
+}
+
+.form-row select {
+   width: calc(100% - 16px);
 } 

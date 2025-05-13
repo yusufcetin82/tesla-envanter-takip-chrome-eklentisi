@@ -68,18 +68,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     return true; // Asenkron yanıt için
   }
 
-  if (request.action === "startChecking") {
-    checkInterval = request.interval || 60; // Varsayılan 60 saniye
-    startChecking();
-    sendResponse({status: "started"});
-  } else if (request.action === "stopChecking") {
-    if (intervalId) {
-      clearInterval(intervalId);
-      intervalId = null;
-    }
-    sendResponse({status: "stopped"});
-  }
-
   return false; // Diğer mesaj türleri için senkron kalabilir
 });
 
@@ -194,19 +182,5 @@ async function updateStatusDisplay(statusData) {
 //     updateStatusDisplay(newStatus); // Zaten bu fonksiyon her şeyi yapar
 //   }
 // });
-
-// Interval'i başlat
-function startChecking() {
-  // Eğer önceki interval varsa temizle
-  if (intervalId) {
-    clearInterval(intervalId);
-  }
-  
-  // Yeni interval'i başlat (saniyeyi milisaniyeye çevir)
-  intervalId = setInterval(checkInventory, checkInterval * 1000);
-}
-
-// Sayfa yüklendiğinde interval'i başlat
-startChecking();
 
 console.log("Background script yüklendi ve dinlemede (URL Kontrol Modu)."); 

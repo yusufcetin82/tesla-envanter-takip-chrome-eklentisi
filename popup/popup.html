@@ -12,6 +12,7 @@
     <div class="tabs">
       <button class="tablink active" data-tabid="tabSettings">Genel Ayarlar</button>
       <button class="tablink" data-tabid="tabTargetVehicle">Hedef Araç</button>
+      <button class="tablink" data-tabid="tabOrderForm">Sipariş Bilgileri</button>
       <button class="tablink" data-tabid="tabStatus">Durum</button>
     </div>
 
@@ -19,7 +20,7 @@
       <h2>Genel Ayarlar</h2>
       <div>
         <label for="trackingInterval">Kontrol Aralığı (saniye):</label>
-        <input type="number" id="trackingInterval" name="trackingInterval" min="30" value="60">
+        <input type="number" id="trackingInterval" name="trackingInterval" min="1" value="60">
       </div>
       <button id="saveSettings">Genel Ayarları Kaydet</button>
       <hr>
@@ -88,11 +89,109 @@
       <button id="saveTargetVehicle">Hedef Aracı Kaydet</button>
     </div>
 
+    <div id="tabOrderForm" class="tabcontent">
+      <h3>Sipariş Form Bilgileri</h3>
+      <p>Bu bilgiler, araç bulunduğunda sipariş sayfasını otomatik doldurmak için kullanılacaktır.</p>
+
+      <div class="form-section">
+        <h4>Profil Yönetimi</h4>
+        <label for="formProfileSelect">Kayıtlı Profil Seç:</label>
+        <select id="formProfileSelect" name="formProfileSelect">
+          <option value="">Yeni Profil Oluştur...</option>
+          <!-- Kayıtlı profiller buraya JS ile eklenecek -->
+        </select>
+        <br>
+        <label for="formProfileName">Profil Adı:</label>
+        <input type="text" id="formProfileName" name="formProfileName" placeholder="Bu form için bir ad girin (örn: Ana Profil)">
+      </div>
+
+      <div class="form-section">
+        <h4>Müşteri Bilgileri</h4>
+        <div>
+          <label>Müşteri Tipi:</label>
+          <input type="radio" name="customerType" value="individual" id="customerTypeIndividual" checked> <label for="customerTypeIndividual">Bireysel</label>
+          <input type="radio" name="customerType" value="business" id="customerTypeCorporate"> <label for="customerTypeCorporate">Kurumsal</label>
+        </div>
+        <label for="identityNumber">TCKN/VKN:</label>
+        <input type="text" id="identityNumber" name="identityNumber">
+        <label for="firstName">Adı:</label>
+        <input type="text" id="firstName" name="firstName">
+        <label for="lastName">Soyadı:</label>
+        <input type="text" id="lastName" name="lastName">
+        <label for="email">E-posta Adresi:</label>
+        <input type="email" id="email" name="email">
+        <!-- <label for="emailConfirm">E-posta Adresini Onayla:</label>
+        <input type="email" id="emailConfirm" name="emailConfirm"> -->
+        <label for="phone">Cep Telefonu Numarası:</label>
+        <input type="tel" id="phone" name="phone" placeholder="5XXXXXXXXX">
+      </div>
+
+      <div class="form-section">
+        <h4>Ödeme Bilgileri (Kredi Kartı)</h4>
+        <label for="cardFullName">Kart Üzerindeki Ad Soyad:</label>
+        <input type="text" id="cardFullName" name="cardFullName">
+        <label for="cardNumber">Kart Numarası:</label>
+        <input type="text" id="cardNumber" name="cardNumber">
+        <label for="cardExpiryMonth">Son Kullanma Ayı (MM):</label>
+        <select id="cardExpiryMonth" name="cardExpiryMonth">
+          <option value="">Ay</option>
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <label for="cardExpiryYear">Son Kullanma Yılı (YYYY):</label>
+        <select id="cardExpiryYear" name="cardExpiryYear">
+          <option value="">Yıl</option>
+          <!-- Yıllar JS ile doldurulacak -->
+        </select>
+        <label for="cardCvv">CVV/CVC:</label>
+        <input type="text" id="cardCvv" name="cardCvv">
+        <!-- <label for="creditCardEmail">Kart İçin E-posta (opsiyonel):</label>
+        <input type="email" id="creditCardEmail" name="creditCardEmail"> -->
+      </div>
+
+      <div class="form-section">
+        <h4>Fatura Adresi</h4>
+        <!-- <label for="billingEmail">Fatura E-postası (opsiyonel):</label>
+        <input type="email" id="billingEmail" name="billingEmail"> -->
+        <label for="billingAddress1">Adres Satırı 1:</label>
+        <input type="text" id="billingAddress1" name="billingAddress1">
+        <label for="billingAddress2">Adres Satırı 2 (opsiyonel):</label>
+        <input type="text" id="billingAddress2" name="billingAddress2">
+        <label for="billingZipCode">Posta Kodu:</label>
+        <input type="text" id="billingZipCode" name="billingZipCode">
+        <label for="billingCity">İlçe/Semt:</label>
+        <input type="text" id="billingCity" name="billingCity">
+        <label for="billingState">Şehir/İl:</label>
+        <input type="text" id="billingState" name="billingState">
+        <label for="billingCountry">Ülke:</label>
+        <input type="text" id="billingCountry" name="billingCountry" value="TR">
+      </div>
+      
+      <!-- Gizlilik onayı (PRIVACY_CONSENT) content_script tarafından işaretlenecek, buradan kaldırıldı -->
+      <!-- <label><input type="checkbox" id="privacyConsent" name="privacyConsent"> Gizlilik Politikasını Kabul Ediyorum</label> -->
+      
+      <button id="saveOrderFormData">Form Bilgilerini Kaydet</button>
+      <button id="clearOrderFormData" class="secondary">Seçili Profil Formunu Temizle/Sil</button>
+    </div>
+
     <div id="tabStatus" class="tabcontent">
       <h2>Eklenti Durumu</h2>
       <p>Son Kontrol: <span id="lastCheckTime">-</span></p>
       <p>Toplam Kontrol: <span id="totalChecks">0</span></p>
       <p>URL Durumu: <span id="targetUrlStatus">-</span></p>
+      <hr>
+      <h4>Manuel Test</h4>
+      <button id="manualTestFillButton" title="Aktif Tesla sipariş sayfasında form doldurmayı manuel olarak tetikler.">Form Doldurmayı Test Et</button>
     </div>
 
   </div>
