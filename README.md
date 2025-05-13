@@ -10,6 +10,7 @@ Bu eklenti, Tesla Türkiye'nin Model Y Juniper stoklarını otomatik olarak taki
 - Araç bulunduğunda masaüstü bildirimi ve otomatik sipariş sekmesi açılır.
 - Durum sekmesinde son kontrol zamanı ve sonuçları görüntülenir.
 - Hiçbir kişisel veri dışarıya gönderilmez, tüm işlemler tarayıcıda gerçekleşir.
+- Form doldurma eklendi ancak test edilemedi.
 
 ## Kurulum ve Kullanım
 1. **Github'dan İndir:**
