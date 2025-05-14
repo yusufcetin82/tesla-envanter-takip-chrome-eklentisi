@@ -28,14 +28,34 @@ async function startTracking() {
     return false;
   }
 
-  let periodInMinutes = Math.max(MIN_ALARM_PERIOD_MINUTES, parseFloat(generalSettings.trackingInterval) / 60);
+  const rawIntervalString = generalSettings.trackingInterval;
+  let trackingIntervalSeconds = parseFloat(rawIntervalString);
+
+  // parseFloat başarısız olursa veya 0 ya da negatif bir değerse varsayılanı kullan
+  if (isNaN(trackingIntervalSeconds) || trackingIntervalSeconds <= 0) {
+    console.warn(`Alınan kontrol aralığı ('${rawIntervalString}') geçersiz veya çok küçük. Varsayılan 60 saniyeye ayarlanıyor.`);
+    trackingIntervalSeconds = 60; // Varsayılan 60 saniye
+  }
+
+  // periodInMinutes hesapla, minimum MIN_ALARM_PERIOD_MINUTES (1 dakika) olmalı
+  // trackingIntervalSeconds zaten saniye cinsinden.
+  let periodInMinutes = Math.max(MIN_ALARM_PERIOD_MINUTES, trackingIntervalSeconds / 60.0);
+
+  // Ekstra güvenlik: periodInMinutes'in de NaN olmadığından emin ol (yukarıdaki mantıkla olmamalı ama yine de)
+  if (isNaN(periodInMinutes)) {
+      console.error(`Hesaplanan periodInMinutes ('${periodInMinutes}') NaN oldu! Bu bir programlama hatası. Varsayılan olarak MIN_ALARM_PERIOD_MINUTES değerine dönülüyor.`);
+      periodInMinutes = MIN_ALARM_PERIOD_MINUTES;
+  }
   
+  console.log(`Alarm periyodu hesaplanıyor: Kullanıcı ayarı (saniye): '${rawIntervalString}', Kullanılacak saniye: ${trackingIntervalSeconds}, Hesaplanan periyot (dakika): ${periodInMinutes}`);
+  
+  // Mevcut alarmı güncelle veya oluştur. Chrome aynı isimli alarmı günceller.
   chrome.alarms.create(URL_CHECK_ALARM_NAME, {
     periodInMinutes: periodInMinutes,
   });
 
   await chrome.storage.local.set({ isTrackingActive: true });
-  console.log(`İzleme BAŞLATILDI (URL Modu). Kontrol periyodu: ${periodInMinutes} dakika. VIN: ${targetVehicleSettings.selectedVehicle}`);
+  console.log(`İzleme BAŞLATILDI (URL Modu). Kontrol periyodu: ${periodInMinutes} dakika (yaklaşık ${trackingIntervalSeconds} saniye). VIN/ID: ${targetVehicleSettings.selectedVehicle}`);
   await updateStatusDisplay({ pluginStatus: "Çalışıyor", isTracking: true, lastCheck: "Henüz yapılmadı", pageStatus: "Kontrol bekleniyor" });
   checkSpecificOrderUrl(); 
   return true;
