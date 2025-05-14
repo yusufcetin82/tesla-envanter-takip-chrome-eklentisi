@@ -1,3 +1,9 @@
+# ÖNEMLİ DUYURU: Bu Proje Artık Gerekli Değil!
+
+**Tesla, envanter sistemini güncelleyerek "sonsuz envanter" benzeri bir yapıya geçtiği için bu eklentinin temel amacı ortadan kalkmıştır. Artık araç bulmak için bu tür bir araca ihtiyaç bulunmamaktadır.**
+
+Bu repo, geliştirme sürecinin bir arşivi olarak tutulmaktadır ancak aktif olarak bakım yapılmayacak veya güncellenmeyecektir.
+
 # Tesla Otomatik Sipariş Asistanı (Chrome Eklentisi)
 
 ## Amaç
